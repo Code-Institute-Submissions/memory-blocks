@@ -21,8 +21,27 @@ body {
     min-height: 100vh;
     font-family: "Salsa", cursive;
     box-sizing: border-box;
-    background-image: var(--bg-gradient)
+    background-image: var(--bg-gradient);
+    text-align: center;
 }
+
+.jumbotron {
+    padding: .5rem;
+    margin: 1rem 0rem;
+    background-color: whitesmoke;
+    display: inline-block;
+}
+
+.title {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-image: var(--bg-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
 
 
 
