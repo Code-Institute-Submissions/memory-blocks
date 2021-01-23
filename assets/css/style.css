@@ -32,6 +32,9 @@ body {
     display: inline-block;
 }
 
+/* Credit for background gradient and animation - Kevin Powell 
+(https://www.youtube.com/watch?v=f3mwKLXpOLk&t=670s&ab_channel=KevinPowell)
+*/
 .title {
     font-size: 1.5rem;
     text-transform: uppercase;
@@ -40,8 +43,18 @@ body {
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
+    background-size: 400%;
+    animation: bg-animation 30s infinite alternate;
 }
 
+@keyframes bg-animation {
+    0% {
+        background-position: left;
+    }
+    100% {
+        background-position: right;
+    }
+}
 
 
 
