@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Salsa&display=swap");
 
+/***** COLOURS *****/
 :root {
     --red: #D9140C;
     --orange: #FC8821;
@@ -15,6 +16,26 @@
         var(--blue));
 }
 
+.red {
+  background-color: var(--red);
+}
+
+.orange {
+  background-color: var(--orange);
+}
+
+.yellow {
+  background-color: var(--yellow);
+}
+
+.green {
+  background-color: var(--green);
+}
+
+.blue {
+  background-color: var(--blue);
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -22,6 +43,7 @@ body {
     font-family: "Salsa", cursive;
     box-sizing: border-box;
     background-image: var(--bg-gradient);
+    background-repeat: no-repeat;
     text-align: center;
 }
 
@@ -33,7 +55,7 @@ body {
 }
 
 /* Credit for background gradient and animation - Kevin Powell 
-(https://www.youtube.com/watch?v=f3mwKLXpOLk&t=670s&ab_channel=KevinPowell)
+   (https://www.youtube.com/watch?v=f3mwKLXpOLk&t=670s&ab_channel=KevinPowell)
 */
 .title {
     font-size: 1.5rem;
@@ -56,5 +78,22 @@ body {
     }
 }
 
+/***** COLOUR PICKER *****/
+.colour-picker {
+    display: flex;
+    justify-content: center;
+    margin: 0rem auto;
+    background-color: whitesmoke;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    max-width: 450px;
+}
+
+.colour {
+    min-width: 40px;
+    min-height: 40px;
+    margin: .4rem;
+    border: 1px solid black;
+}
 
 
