@@ -1,3 +1,9 @@
+- ### Wireframes
+
+  The wireframes for this project were created using Balsamiq.
+
+  - [Homepage](https://github.com/Johnny-Morgan/memory-blocks/blob/master/assets/docs/wireframes_homepage.pdf).
+
 - ### Design
 
   - #### Colour Scheme
