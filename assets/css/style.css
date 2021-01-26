@@ -49,16 +49,17 @@ body {
 
 .jumbotron {
     padding: .5rem;
-    margin: 1rem 0rem;
+    margin: 2rem 0rem 1rem;
     background-color: whitesmoke;
     display: inline-block;
+    opacity: 0.6;
 }
 
 /* Credit for background gradient and animation - Kevin Powell 
    (https://www.youtube.com/watch?v=f3mwKLXpOLk&t=670s&ab_channel=KevinPowell)
 */
 .title {
-    font-size: 1.5rem;
+    font-size: 2rem;
     text-transform: uppercase;
     font-weight: bold;
     background-image: var(--bg-gradient);
@@ -66,7 +67,7 @@ body {
     -webkit-background-clip: text;
     color: transparent;
     background-size: 400%;
-    animation: bg-animation 30s infinite alternate;
+    animation: bg-animation 10s infinite alternate;
 }
 
 @keyframes bg-animation {
@@ -76,6 +77,11 @@ body {
     100% {
         background-position: right;
     }
+}
+
+.tagline {
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
 /***** COLOUR PICKER *****/
@@ -95,5 +101,7 @@ body {
     margin: .4rem;
     border: 1px solid black;
 }
+
+
 
 
