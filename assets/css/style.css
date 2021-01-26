@@ -84,6 +84,16 @@ body {
     letter-spacing: 1px;
 }
 
+.icon {
+    font-size: 600%;
+    text-decoration: none;
+    color: darkred;
+}
+
+.icon:hover{
+    color: var(--red);
+}
+
 /***** COLOUR PICKER *****/
 .colour-picker {
     display: flex;
