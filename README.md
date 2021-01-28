@@ -4,6 +4,8 @@
 
   - [Homepage](https://github.com/Johnny-Morgan/memory-blocks/blob/master/assets/docs/wireframes_homepage.pdf).
 
+  - [Gamepage](https://github.com/Johnny-Morgan/memory-blocks/blob/master/assets/docs/wireframes_gamepage.pdf).
+
 - ### Design
 
   - #### Colour Scheme
