@@ -31,6 +31,11 @@ let easyGame;
 let mediumGame;
 let hardGame;
 
+// Grid sizes
+let gridWidth;
+let gridHeight;
+let gridSize;
+
 for (const colour of colours) {
     // This function sets the active colour for when the user is filling in the grid
     // It also gives the picked colour a larger border to make it more clear that it has been clicked on
@@ -64,29 +69,17 @@ function generateRandomNumber() {
 // Function that returns an array containing random colours from the colourPickerColours array
 function generateArray() {
     let randomIndex;
-    gridColours = [];
-    if (easyGame) {
-        for (let i = 0; i < 9; i++) {
-            randomIndex = generateRandomNumber();
-            gridColours.push(colourPickerColours[randomIndex]);
-        }
-    } else if (mediumGame) {
-        for (let i = 0; i < 16; i++) {
-            randomIndex = generateRandomNumber();
-            gridColours.push(colourPickerColours[randomIndex]);
-        }
-    } else if (hardGame) {
-        for (let i = 0; i < 25; i++) {
-            randomIndex = generateRandomNumber();
-            gridColours.push(colourPickerColours[randomIndex]);
-        }
+    gridColours = []; // reset gridColours array
+    for (let i = 0; i < gridSize; i++) {
+        randomIndex = generateRandomNumber();
+        gridColours.push(colourPickerColours[randomIndex]);
     }
     return gridColours;
 }
 
 function generateGrid() {
-    for (let i = 0; i < 5; i++) {
-        for (let j = 0; j < 5; j++) {
+    for (let i = 0; i < gridWidth; i++) {
+        for (let j = 0; j < gridHeight; j++) {
             $(`#square-${i}-${j}`).css("background-color", gridColours.shift());
         }
     }
@@ -94,22 +87,25 @@ function generateGrid() {
 
 $("#easy").click(function () {
     easyGame = true;
-    mediumGame = false;
-    hardGame = false;
+    gridWidth = 3;
+    gridHeight = 3;
+    gridSize = 9;
     generateArray();
 });
 
 $("#medium").click(function () {
-    easyGame = false;
     mediumGame = true;
-    hardGame = false;
+    gridWidth = 4;
+    gridHeight = 4;
+    gridSize = 16;
     generateArray();
 });
 
 $("#hard").click(function () {
-    easyGame = false;
-    mediumGame = false;
     hardGame = true;
+    gridWidth = 5;
+    gridHeight = 5;
+    gridSize = 25;
     generateArray();
 });
 
