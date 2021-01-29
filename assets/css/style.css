@@ -55,6 +55,10 @@ body {
     opacity: 0.6;
 }
 
+.hidden {
+    display: none;
+}
+
 /* Credit for background gradient and animation - Kevin Powell 
    (https://www.youtube.com/watch?v=f3mwKLXpOLk&t=670s&ab_channel=KevinPowell)
 */
@@ -118,7 +122,6 @@ body {
 }
 
 .row {
-  display: flex;
   justify-content: center;
 }
 
@@ -145,8 +148,8 @@ footer {
     }
 }
 
-
-
 .clicked-color {
   border: 5px solid black;
 }
+
+

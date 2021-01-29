@@ -90,6 +90,13 @@ $("#easy").click(function () {
     gridWidth = 3;
     gridHeight = 3;
     gridSize = 9;
+    // Change grid size
+    $(".row3").addClass("hidden");
+    $(".row4").addClass("hidden");
+    for (let i = 0; i < gridWidth; i++) {
+        $(`#square-${i}-3`).addClass("hidden");
+        $(`#square-${i}-4`).addClass("hidden");
+    }
     generateArray();
 });
 
@@ -98,6 +105,13 @@ $("#medium").click(function () {
     gridWidth = 4;
     gridHeight = 4;
     gridSize = 16;
+    // Change grid size
+    $(".row3").removeClass("hidden");
+    $(".row4").addClass("hidden");
+    for (let i = 0; i < gridWidth; i++) {
+        $(`#square-${i}-3`).removeClass("hidden");
+        $(`#square-${i}-4`).addClass("hidden");
+    }
     generateArray();
 });
 
@@ -106,6 +120,13 @@ $("#hard").click(function () {
     gridWidth = 5;
     gridHeight = 5;
     gridSize = 25;
+    // Change grid size
+    $(".row3").removeClass("hidden");
+    $(".row4").removeClass("hidden");
+    for (let i = 0; i < gridWidth; i++) {
+        $(`#square-${i}-3`).removeClass("hidden");
+        $(`#square-${i}-4`).removeClass("hidden");
+    }
     generateArray();
 });
 
