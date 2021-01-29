@@ -92,12 +92,27 @@ function generateGrid() {
     }
 }
 
-// Test functions
-easyGame = false;
-mediumGame = false;
-hardGame = true;
-generateArray();
-generateGrid();
-$("#play").click(generateGrid);
+$("#easy").click(function () {
+    easyGame = true;
+    mediumGame = false;
+    hardGame = false;
+    generateArray();
+});
 
+$("#medium").click(function () {
+    easyGame = false;
+    mediumGame = true;
+    hardGame = false;
+    generateArray();
+});
+
+$("#hard").click(function () {
+    easyGame = false;
+    mediumGame = false;
+    hardGame = true;
+    generateArray();
+});
+
+// Test generateGrid function
+$("#play").click(generateGrid);
 
