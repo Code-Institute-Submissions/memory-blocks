@@ -84,3 +84,20 @@ function generateArray() {
     return gridColours;
 }
 
+function generateGrid() {
+    for (let i = 0; i < 5; i++) {
+        for (let j = 0; j < 5; j++) {
+            $(`#square-${i}-${j}`).css("background-color", gridColours.shift());
+        }
+    }
+}
+
+// Test functions
+easyGame = false;
+mediumGame = false;
+hardGame = true;
+generateArray();
+generateGrid();
+$("#play").click(generateGrid);
+
+
