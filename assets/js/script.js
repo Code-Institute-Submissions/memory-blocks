@@ -199,12 +199,19 @@ function calculatePlayingTime() {
 
 function playingTime() {
     time = calculatePlayingTime();
+    $("#finish").removeClass("hidden");
     timer = setInterval(function () {
         $(".timer").html(time);
         if (time === 0) {
             clearInterval(timer);
+            $("#finish").addClass("hidden");
+            $("#correct").removeClass("hidden");
+            $("#play-again").removeClass("hidden");
+            $(".message1").html("Game Over!");
+            $(".timer").html("");
         }
         time--;
     }, 1000);
 };
+
 
