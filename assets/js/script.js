@@ -230,7 +230,7 @@ function finishGame() {
     clearInterval(timer);
     playerColours = [];
     score = 0;
-    points = 10
+    points = getPoints();
 
     /* Compare contents of the array containing the players guesses 
     to the array containing the original grid colours */
@@ -244,4 +244,16 @@ function finishGame() {
 
     $(".message2").html(`You got ${correctGuesses} out of ${gridSize} correct!`);
     $(".showScore").html(`Your score: ${score}`);
+}
+
+
+// Function that returns the points for each game level
+function getPoints() {
+    if (easyGame) {
+        return 10;
+    } else if (mediumGame) {
+        return 20;
+    } else if (hardGame) {
+        return 30;
+    }
 }
