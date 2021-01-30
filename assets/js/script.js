@@ -41,15 +41,15 @@ for (const colour of colours) {
     // It also gives the picked colour a larger border to make it more clear that it has been clicked on
     colour.click(function () {
         if (colour === redPick) {
-            activeColor = red;
+            activeColor = "red";
         } else if (colour === orangePick) {
-            activeColor = orange;
+            activeColor = "orange";
         } else if (colour === yellowPick) {
-            activeColor = yellow;
+            activeColor = "yellow";
         } else if (colour === greenPick) {
-            activeColor = green;
+            activeColor = "green";
         } else if (colour === bluePick) {
-            activeColor = blue;
+            activeColor = "blue";
         }
 
         for (const colour of colours) {
@@ -84,7 +84,7 @@ function generateGrid() {
         }
     }
 }
-
+let copyOfGridColours;
 $("#easy").click(function () {
     easyGame = true;
     mediumGame = false;
@@ -99,7 +99,7 @@ $("#easy").click(function () {
         $(`#square-${i}-3`).addClass("hidden");
         $(`#square-${i}-4`).addClass("hidden");
     }
-    generateArray();
+    copyOfGridColours = generateArray().slice();
     // Show the play button
     $("#play").removeClass("hidden");
 });
@@ -118,7 +118,7 @@ $("#medium").click(function () {
         $(`#square-${i}-3`).removeClass("hidden");
         $(`#square-${i}-4`).addClass("hidden");
     }
-    generateArray();
+    copyOfGridColours = generateArray().slice();
     $("#play").removeClass("hidden");
 });
 
@@ -136,7 +136,7 @@ $("#hard").click(function () {
         $(`#square-${i}-3`).removeClass("hidden");
         $(`#square-${i}-4`).removeClass("hidden");
     }
-    generateArray();
+    copyOfGridColours = generateArray().slice();
     $("#play").removeClass("hidden");
 
 });
@@ -216,10 +216,32 @@ function playingTime() {
             $("#play-again").removeClass("hidden");
             $(".message1").html("Game Over!");
             $(".timer").html("");
+            // Prevent user clicking on grid after game ended
             $("#grid-area").css("pointer-events", "none");
+            finishGame();
         }
         time--;
     }, 1000);
 };
 
 
+let score, points;
+function finishGame() {
+    clearInterval(timer);
+    playerColours = [];
+    score = 0;
+    points = 10
+
+    /* Compare contents of the array containing the players guesses 
+    to the array containing the original grid colours */
+    let correctGuesses = 0;
+    for (let i = 0; i < gridSize; i++) {
+        if (playerColours[i] === copyOfGridColours[i]) {
+            score += points;
+            correctGuesses++;
+        }
+    }
+
+    $(".message2").html(`You got ${correctGuesses} out of ${gridSize} correct!`);
+    $(".showScore").html(`Your score: ${score}`);
+}
