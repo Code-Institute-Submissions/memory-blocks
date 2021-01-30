@@ -176,4 +176,14 @@ function calculateMemorizingTime() {
     }
 }
 
+// Timers are lower than what the actual game will be for testing purposes
+function calculatePlayingTime() {
+    if (easyGame) {
+        return 5;
+    } else if (mediumGame) {
+        return 7;
+    } else if (hardGame) {
+        return 9;
+    }
+}
 
