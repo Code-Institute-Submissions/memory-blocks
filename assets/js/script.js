@@ -131,5 +131,19 @@ $("#hard").click(function () {
 });
 
 // Test generateGrid function
-$("#play").click(generateGrid);
+$("#play").click(function () {
+    generateGrid();
+    // Hide the buttons to prevent user changing the grid size during a game
+    $(".game-level").addClass("hidden");
+});
 
+
+function calculateMemorizingTime() {
+    if (easyGame) {
+        return 3;
+    } else if (mediumGame) {
+        return 6;
+    } else if (hardGame) {
+        return 9;
+    }
+}
