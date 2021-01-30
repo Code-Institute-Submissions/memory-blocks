@@ -87,6 +87,8 @@ function generateGrid() {
 
 $("#easy").click(function () {
     easyGame = true;
+    mediumGame = false;
+    hardGame = false;
     gridWidth = 3;
     gridHeight = 3;
     gridSize = 9;
@@ -103,7 +105,9 @@ $("#easy").click(function () {
 });
 
 $("#medium").click(function () {
+    easyGame = false;
     mediumGame = true;
+    hardGame = false;
     gridWidth = 4;
     gridHeight = 4;
     gridSize = 16;
@@ -119,6 +123,8 @@ $("#medium").click(function () {
 });
 
 $("#hard").click(function () {
+    easyGame = false;
+    mediumGame = false;
     hardGame = true;
     gridWidth = 5;
     gridHeight = 5;
@@ -132,15 +138,18 @@ $("#hard").click(function () {
     }
     generateArray();
     $("#play").removeClass("hidden");
+
 });
 
 // Test generateGrid function
 $("#play").click(function () {
     generateGrid();
+    $("#play").addClass("hidden");
     $(".message1").html("Memorize the grid");
     // Hide the buttons to prevent user changing the grid size during a game
     $(".game-level").addClass("hidden");
     memorizingTime();
+    setTimeout(playingTime, (time + 1) * 1000);
 });
 
 let time, timer;
@@ -164,7 +173,7 @@ function memorizingTime() {
     }, 1000);
 };
 
-
+// Function that returns the time allowed for the player for memorizing the grid
 // Times are lower than what the actual game will be for testing purposes
 function calculateMemorizingTime() {
     if (easyGame) {
@@ -176,6 +185,7 @@ function calculateMemorizingTime() {
     }
 }
 
+// Function that returns the time allowed for the player for filling in the grid from memory
 // Timers are lower than what the actual game will be for testing purposes
 function calculatePlayingTime() {
     if (easyGame) {
@@ -186,4 +196,15 @@ function calculatePlayingTime() {
         return 9;
     }
 }
+
+function playingTime() {
+    time = calculatePlayingTime();
+    timer = setInterval(function () {
+        $(".timer").html(time);
+        if (time === 0) {
+            clearInterval(timer);
+        }
+        time--;
+    }, 1000);
+};
 
