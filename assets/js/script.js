@@ -202,6 +202,13 @@ function playingTime() {
     $("#finish").removeClass("hidden");
     timer = setInterval(function () {
         $(".timer").html(time);
+        for (let i = 0; i < gridWidth; i++) {
+            for (let j = 0; j < gridWidth; j++) {
+                $(`#square-${i}-${j}`).click(function () {
+                    $(this).css("background-color", activeColor);
+                });
+            }
+        }
         if (time === 0) {
             clearInterval(timer);
             $("#finish").addClass("hidden");
@@ -209,6 +216,7 @@ function playingTime() {
             $("#play-again").removeClass("hidden");
             $(".message1").html("Game Over!");
             $(".timer").html("");
+            $("#grid-area").css("pointer-events", "none");
         }
         time--;
     }, 1000);
