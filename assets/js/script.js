@@ -98,6 +98,8 @@ $("#easy").click(function () {
         $(`#square-${i}-4`).addClass("hidden");
     }
     generateArray();
+    // Show the play button
+    $("#play").removeClass("hidden");
 });
 
 $("#medium").click(function () {
@@ -113,6 +115,7 @@ $("#medium").click(function () {
         $(`#square-${i}-4`).addClass("hidden");
     }
     generateArray();
+    $("#play").removeClass("hidden");
 });
 
 $("#hard").click(function () {
@@ -128,11 +131,13 @@ $("#hard").click(function () {
         $(`#square-${i}-4`).removeClass("hidden");
     }
     generateArray();
+    $("#play").removeClass("hidden");
 });
 
 // Test generateGrid function
 $("#play").click(function () {
     generateGrid();
+    $(".message1").html("Memorize the grid");
     // Hide the buttons to prevent user changing the grid size during a game
     $(".game-level").addClass("hidden");
     memorizingTime();
@@ -143,7 +148,6 @@ let time, timer;
 function memorizingTime() {
     time = calculateMemorizingTime();
     timer = setInterval(function () {
-        $(".message1").html("Memorize the grid");
         $(".timer").html(time);
         if (time === 0) {
             clearInterval(timer);
@@ -160,6 +164,8 @@ function memorizingTime() {
     }, 1000);
 };
 
+
+// Times are lower than what the actual game will be for testing purposes
 function calculateMemorizingTime() {
     if (easyGame) {
         return 3;
@@ -169,4 +175,5 @@ function calculateMemorizingTime() {
         return 9;
     }
 }
+
 
