@@ -135,8 +135,30 @@ $("#play").click(function () {
     generateGrid();
     // Hide the buttons to prevent user changing the grid size during a game
     $(".game-level").addClass("hidden");
+    memorizingTime();
 });
 
+let time, timer;
+
+function memorizingTime() {
+    time = calculateMemorizingTime();
+    timer = setInterval(function () {
+        $(".message1").html("Memorize the grid");
+        $(".timer").html(time);
+        if (time === 0) {
+            clearInterval(timer);
+            $(".timer").html("GO!");
+            $(".message1").html("Fill in the grid!");
+            // Set grid colour to lightgrey
+            for (let i = 0; i < gridWidth; i++) {
+                for (let j = 0; j < gridWidth; j++) {
+                    $(`#square-${i}-${j}`).css("backgroundColor", "lightgrey");
+                }
+            }
+        }
+        time--;
+    }, 1000);
+};
 
 function calculateMemorizingTime() {
     if (easyGame) {
@@ -147,3 +169,4 @@ function calculateMemorizingTime() {
         return 9;
     }
 }
+
