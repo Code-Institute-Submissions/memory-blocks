@@ -84,7 +84,7 @@ function generateGrid() {
         }
     }
 }
-let copyOfGridColours;
+let copyOfGridColours, secondCopyOfGridColours;
 $("#easy").click(function () {
     easyGame = true;
     mediumGame = false;
@@ -100,6 +100,7 @@ $("#easy").click(function () {
         $(`#square-${i}-4`).addClass("hidden");
     }
     copyOfGridColours = generateArray().slice();
+    secondCopyOfGridColours = copyOfGridColours.slice();
     // Show the play button
     $("#play").removeClass("hidden");
 });
@@ -119,6 +120,7 @@ $("#medium").click(function () {
         $(`#square-${i}-4`).addClass("hidden");
     }
     copyOfGridColours = generateArray().slice();
+    secondCopyOfGridColours = copyOfGridColours.slice();
     $("#play").removeClass("hidden");
 });
 
@@ -137,6 +139,7 @@ $("#hard").click(function () {
         $(`#square-${i}-4`).removeClass("hidden");
     }
     copyOfGridColours = generateArray().slice();
+    secondCopyOfGridColours = copyOfGridColours.slice();
     $("#play").removeClass("hidden");
 
 });
@@ -226,7 +229,6 @@ function finishGame() {
     saveGuesses();
 
     $("#finish").addClass("hidden");
-    $("#correct").removeClass("hidden");
     $("#play-again").removeClass("hidden");
     $(".message1").html("Game Over!");
     $(".timer").html("");
@@ -243,6 +245,12 @@ function finishGame() {
             correctGuesses++;
         }
     }
+
+    // Do not display "Show Solution" button if player got all guesses correct
+    if (correctGuesses !== gridSize) {
+        $("#correct").removeClass("hidden");
+    }
+
     showWrongGuesses();
     $(".message2").html(`You got ${correctGuesses} out of ${gridSize} correct!`);
     $(".showScore").html(`Your score: ${score}`);
@@ -283,3 +291,13 @@ function showWrongGuesses() {
 }
 
 $("#finish").click(finishGame);
+
+// Function to show solution
+$("#correct").click(function () {
+    for (let i = 0; i < gridWidth; i++) {
+        for (let j = 0; j < gridWidth; j++) {
+            $(`#square-${i}-${j}`).css("background-color", secondCopyOfGridColours.shift());
+            $(`#square-${i}-${j}`).css("opacity", 1);
+        }
+    }
+})
