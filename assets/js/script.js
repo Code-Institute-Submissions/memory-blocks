@@ -232,7 +232,7 @@ function finishGame() {
     score = 0;
     points = getPoints();
     saveGuesses();
-
+    showWrongGuesses();
     /* Compare contents of the array containing the players guesses 
     to the array containing the original grid colours */
     let correctGuesses = 0;
@@ -269,4 +269,14 @@ function saveGuesses() {
     }
 }
 
-
+// Function that changes opacity and add an "X" to each wrong cell in the grid
+function showWrongGuesses() {
+    for (let i = 0; i < gridWidth; i++) {
+        for (let j = 0; j < gridWidth; j++) {
+            if (playerColours.shift() !== copyOfGridColours.shift()) {
+                $(`#square-${i}-${j}`).css("opacity", 0.8);
+                $(`#square-${i}-${j}`).addClass("add-X");
+            }
+        }
+    }
+}

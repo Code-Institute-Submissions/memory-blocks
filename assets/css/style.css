@@ -152,4 +152,9 @@ footer {
   border: 5px solid black;
 }
 
-
+.add-X:before {
+  content: "X";
+  font-size: 2rem;
+  vertical-align: -75%;
+  padding: 2rem;
+}
