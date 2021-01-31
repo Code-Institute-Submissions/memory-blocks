@@ -36,6 +36,9 @@ let gridWidth;
 let gridHeight;
 let gridSize;
 
+// The colour picker is not useable until the playing time starts
+$(".colour-picker").css("pointer-events", "none");
+
 for (const colour of colours) {
     // This function sets the active colour for when the user is filling in the grid
     // It also gives the picked colour a larger border to make it more clear that it has been clicked on
@@ -165,6 +168,7 @@ function memorizingTime() {
             clearInterval(timer);
             $(".timer").html("GO!");
             $(".message1").html("Fill in the grid!");
+            $(".colour-picker").css("pointer-events", "auto");
             // Set grid colour to lightgrey
             for (let i = 0; i < gridWidth; i++) {
                 for (let j = 0; j < gridWidth; j++) {
@@ -216,6 +220,8 @@ function playingTime() {
         if (time === 0) {
             clearInterval(timer);
             finishGame();
+            // Hide colour picker
+            // $(".colour-picker").addClass("invisible");
         }
         time--;
     }, 1000);
@@ -233,9 +239,13 @@ function finishGame() {
     $("#play-again").removeClass("hidden");
     $(".message1").html("Game Over!");
     $(".timer").html("");
-    // Prevent user clicking on grid after game ended
+    // Prevent user clicking on grid and colour picker after game ended
     $("#grid-area").css("pointer-events", "none");
-
+    $(".colour-picker").css("pointer-events", "none");
+    for (const colour of colours) {
+        // Remove border for active colour
+        colour.removeClass("clicked-color");
+    }
     /* Compare contents of the array containing the players guesses 
     to the array containing the original grid colours */
     let correctGuesses = 0;
@@ -312,6 +322,7 @@ $("#play-again").click(function () {
     $("#correct").addClass("hidden");
     $("#play-again").addClass("hidden");
     $(".game-level").removeClass("hidden");
+
     for (let i = 0; i < gridWidth; i++) {
         for (let j = 0; j < gridWidth; j++) {
             $(`#square-${i}-${j}`).css("backgroundColor", "lightgrey");
@@ -319,7 +330,7 @@ $("#play-again").click(function () {
             $(`#square-${i}-${j}`).removeClass("add-X");
         }
     }
-})
+});
 
 /* Credit for text animation - Tobias Ahlin
    (https://tobiasahlin.com/moving-letters/#9)
