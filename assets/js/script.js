@@ -1,12 +1,12 @@
 'use strict';
 // Colour picker background colours
-const red = "#D9140C";
-const orange = "#FC8821";
-const yellow = "#FAD500";
-const green = "#88C742";
-const blue = "#29ABE9";
+const red = "rgb(217, 20, 12)";
+const orange = "rgb(252, 136, 33)";
+const yellow = "rgb(250, 213, 0)";
+const green = "rgb(136, 199, 66)";
+const blue = "rgb(41, 171, 233)";
 // For easier debugging we will use the names of the colours
-const colourPickerColours = ["red", "orange", "yellow", "green", "blue"];
+const colourPickerColours = [red, orange, yellow, green, blue];
 
 // Colour picker divs
 // The user can pick one colour which then becomes the active colour
@@ -41,15 +41,15 @@ for (const colour of colours) {
     // It also gives the picked colour a larger border to make it more clear that it has been clicked on
     colour.click(function () {
         if (colour === redPick) {
-            activeColor = "red";
+            activeColor = red;
         } else if (colour === orangePick) {
-            activeColor = "orange";
+            activeColor = orange;
         } else if (colour === yellowPick) {
-            activeColor = "yellow";
+            activeColor = yellow;
         } else if (colour === greenPick) {
-            activeColor = "green";
+            activeColor = green;
         } else if (colour === bluePick) {
-            activeColor = "blue";
+            activeColor = blue;
         }
 
         for (const colour of colours) {
@@ -320,7 +320,6 @@ $("#play-again").click(function () {
         }
     }
 })
-
 
 /* Credit for text animation - Tobias Ahlin
    (https://tobiasahlin.com/moving-letters/#9)
