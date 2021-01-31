@@ -15,6 +15,51 @@
     
     ![Image](assets/images/palette.png)
 
+## Technologies Used
+
+### Languages Used
+
+- [HTML5](https://en.wikipedia.org/wiki/HTML5)
+
+- [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+
+- [JavaScript](https://www.javascript.com/)
+
+### Frameworks, Libraries & Programs Used
+
+- [jQuery](https://jquery.com/)
+
+  - jQuery is used to simplify the JavaScript code and DOM manipulation. 
+
+- [Bootstrap 4.5](https://getbootstrap.com/)
+
+  - Bootstrap is used to assist with the responsiveness and styling of the website.
+
+- [GitPod](https://gitpod.io)
+
+  - GitPod was used as the IDE for this project.
+
+- [Git](https://git-scm.com/)
+
+  - Git is used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
+
+- [GitHub](https://github.com/)
+
+  - GitHub is used to store the project's code after being pushed from Git.
+
+- [Balsamiq](https://balsamiq.com/)
+
+  - Balsamiq is used to create the wireframes during the design process.
+
+- [Google Fonts](https://fonts.google.com/)
+
+  - Google Fonts is used to obtain the Roboto Condensed font family.
+
+- [Font Awesome](https://fontawesome.com/)
+
+  - Font Awesome is used to obtain the icons used in the Contact Me section.
+
+
 ## Credits
 
 ### Code
