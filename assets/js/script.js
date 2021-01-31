@@ -211,19 +211,11 @@ function playingTime() {
         }
         if (time === 0) {
             clearInterval(timer);
-            $("#finish").addClass("hidden");
-            $("#correct").removeClass("hidden");
-            $("#play-again").removeClass("hidden");
-            $(".message1").html("Game Over!");
-            $(".timer").html("");
-            // Prevent user clicking on grid after game ended
-            $("#grid-area").css("pointer-events", "none");
             finishGame();
         }
         time--;
     }, 1000);
 };
-
 
 let score, points;
 function finishGame() {
@@ -232,20 +224,29 @@ function finishGame() {
     score = 0;
     points = getPoints();
     saveGuesses();
-    showWrongGuesses();
+
+    $("#finish").addClass("hidden");
+    $("#correct").removeClass("hidden");
+    $("#play-again").removeClass("hidden");
+    $(".message1").html("Game Over!");
+    $(".timer").html("");
+    // Prevent user clicking on grid after game ended
+    $("#grid-area").css("pointer-events", "none");
+
     /* Compare contents of the array containing the players guesses 
     to the array containing the original grid colours */
     let correctGuesses = 0;
+
     for (let i = 0; i < gridSize; i++) {
         if (playerColours[i] === copyOfGridColours[i]) {
             score += points;
             correctGuesses++;
         }
     }
+    showWrongGuesses();
     $(".message2").html(`You got ${correctGuesses} out of ${gridSize} correct!`);
     $(".showScore").html(`Your score: ${score}`);
 }
-
 
 // Function that returns the points for each game level
 function getPoints() {
@@ -280,3 +281,5 @@ function showWrongGuesses() {
         }
     }
 }
+
+$("#finish").click(finishGame);
