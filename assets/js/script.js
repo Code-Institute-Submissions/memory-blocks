@@ -203,6 +203,7 @@ function calculatePlayingTime() {
 function playingTime() {
     time = calculatePlayingTime();
     $("#finish").removeClass("hidden");
+    $("#grid-area").css("pointer-events", "auto");
     timer = setInterval(function () {
         $(".timer").html(time);
         for (let i = 0; i < gridWidth; i++) {
@@ -298,6 +299,24 @@ $("#correct").click(function () {
         for (let j = 0; j < gridWidth; j++) {
             $(`#square-${i}-${j}`).css("background-color", secondCopyOfGridColours.shift());
             $(`#square-${i}-${j}`).css("opacity", 1);
+        }
+    }
+});
+
+// Function to reset game and play again
+$("#play-again").click(function () {
+    $(".message1").html("Choose Easy, Medium or Hard!");
+    $(".message2").html("");
+    $(".showScore").html("");
+    $(".timer").html("");
+    $("#correct").addClass("hidden");
+    $("#play-again").addClass("hidden");
+    $(".game-level").removeClass("hidden");
+    for (let i = 0; i < gridWidth; i++) {
+        for (let j = 0; j < gridWidth; j++) {
+            $(`#square-${i}-${j}`).css("backgroundColor", "lightgrey");
+            $(`#square-${i}-${j}`).css("opacity", 1);
+            $(`#square-${i}-${j}`).removeClass("add-X");
         }
     }
 })
