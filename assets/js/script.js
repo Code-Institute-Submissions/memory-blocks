@@ -231,6 +231,7 @@ function finishGame() {
     playerColours = [];
     score = 0;
     points = getPoints();
+    saveGuesses();
 
     /* Compare contents of the array containing the players guesses 
     to the array containing the original grid colours */
@@ -241,7 +242,6 @@ function finishGame() {
             correctGuesses++;
         }
     }
-
     $(".message2").html(`You got ${correctGuesses} out of ${gridSize} correct!`);
     $(".showScore").html(`Your score: ${score}`);
 }
@@ -257,3 +257,16 @@ function getPoints() {
         return 30;
     }
 }
+
+// Function that loops through game grid and saves the colours that user has guessed
+function saveGuesses() {
+    for (let i = 0; i < gridWidth; i++) {
+        for (let j = 0; j < gridWidth; j++) {
+            playerColours.push(
+                document.getElementById(`square-${i}-${j}`).style.backgroundColor
+            );
+        }
+    }
+}
+
+
