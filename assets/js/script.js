@@ -36,8 +36,8 @@ let gridWidth;
 let gridHeight;
 let gridSize;
 
-// The colour picker is not useable until the playing time starts
-$(".colour-picker").css("pointer-events", "none");
+// Hide the colour picker until the playing time starts
+$(".colour-picker").hide();
 
 for (const colour of colours) {
     // This function sets the active colour for when the user is filling in the grid
@@ -144,7 +144,6 @@ $("#hard").click(function () {
     copyOfGridColours = generateArray().slice();
     secondCopyOfGridColours = copyOfGridColours.slice();
     $("#play").removeClass("hidden");
-
 });
 
 // Test generateGrid function
@@ -206,6 +205,7 @@ function calculatePlayingTime() {
 
 function playingTime() {
     time = calculatePlayingTime();
+    $(".colour-picker").show();
     $("#finish").removeClass("hidden");
     $("#grid-area").css("pointer-events", "auto");
     timer = setInterval(function () {
@@ -220,8 +220,6 @@ function playingTime() {
         if (time === 0) {
             clearInterval(timer);
             finishGame();
-            // Hide colour picker
-            // $(".colour-picker").addClass("invisible");
         }
         time--;
     }, 1000);
@@ -241,7 +239,7 @@ function finishGame() {
     $(".timer").html("");
     // Prevent user clicking on grid and colour picker after game ended
     $("#grid-area").css("pointer-events", "none");
-    $(".colour-picker").css("pointer-events", "none");
+    $(".colour-picker").hide();
     for (const colour of colours) {
         // Remove border for active colour
         colour.removeClass("clicked-color");
