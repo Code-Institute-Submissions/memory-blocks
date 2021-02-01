@@ -240,6 +240,32 @@ footer {
      font-size: 3rem;
 }
 
+/***** INSTRUCTIONS MODAL *****/
+.large-text {
+    font-size: 2rem;
+}
+
+.medium-text {
+    font-size: 1.2rem;
+}
+
+.bullet {
+    font-weight: 600;
+    font-style: italic;
+}
+
+.green-text {
+    color: var(--green);
+}
+
+.orange-text {
+    color: var(--orange);
+}
+
+.red-text {
+    color: var(--red);
+}
+
 /***** MEDIA QUERIES *****/
 @media (max-width: 768px) {
     .colour-picker {
