@@ -247,6 +247,14 @@ footer {
     }
 }
 
+.message-area {
+    font-size: 2rem;
+}
+
+.timer {
+     font-size: 3rem;
+}
+
 @media (max-width: 576px) {
     .colour {
         min-width: 40px;
