@@ -106,6 +106,7 @@ $("#easy").click(function () {
     secondCopyOfGridColours = copyOfGridColours.slice();
     // Show the play button
     $("#play").removeClass("hidden");
+    $(".message1").html("You have chosen Easy.");
 });
 
 $("#medium").click(function () {
@@ -125,6 +126,7 @@ $("#medium").click(function () {
     copyOfGridColours = generateArray().slice();
     secondCopyOfGridColours = copyOfGridColours.slice();
     $("#play").removeClass("hidden");
+    $(".message1").html("You have chosen Medium.");
 });
 
 $("#hard").click(function () {
@@ -144,6 +146,7 @@ $("#hard").click(function () {
     copyOfGridColours = generateArray().slice();
     secondCopyOfGridColours = copyOfGridColours.slice();
     $("#play").removeClass("hidden");
+    $(".message1").html("You have chosen Hard, good luck!");
 });
 
 // Test generateGrid function
