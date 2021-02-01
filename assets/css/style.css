@@ -184,7 +184,6 @@ body {
   background-color: #f24437;
 }
 
-
 footer {
    position:absolute;
    bottom:0;
@@ -228,6 +227,19 @@ footer {
   padding: 2rem;
 }
 
+/***** MESSAGE AREA *****/
+.message-area {
+    font-size: 2rem;
+}
+
+.showScore {
+    font-size: 3rem;
+}
+
+.timer {
+     font-size: 3rem;
+}
+
 /***** MEDIA QUERIES *****/
 @media (max-width: 768px) {
     .colour-picker {
@@ -245,14 +257,6 @@ footer {
     .button {
         padding: .75em 1.5em;
     }
-}
-
-.message-area {
-    font-size: 2rem;
-}
-
-.timer {
-     font-size: 3rem;
 }
 
 @media (max-width: 576px) {
