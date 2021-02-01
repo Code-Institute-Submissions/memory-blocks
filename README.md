@@ -6,6 +6,8 @@
 
   - [Gamepage](https://github.com/Johnny-Morgan/memory-blocks/blob/master/assets/docs/wireframes_gamepage.pdf).
 
+  - [Instructions Modal](https://github.com/Johnny-Morgan/memory-blocks/blob/master/assets/docs/wireframes_instructions_modal.pdf).
+
 - ### Design
 
   - #### Colour Scheme
