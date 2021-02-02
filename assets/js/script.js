@@ -36,14 +36,11 @@ let gridWidth;
 let gridHeight;
 let gridSize;
 
+// High Score
 let highScore = localStorage.getItem("highScore");
 if (highScore !== null) {
-    document.getElementById("high-score").innerHTML = localStorage.getItem("highScore");
+    $("#high-score").html(localStorage.getItem("highScore"));
 }
-
-
-
-
 
 // Hide the colour picker until the playing time starts
 $(".colour-picker").hide();
@@ -275,12 +272,13 @@ function finishGame() {
     showWrongGuesses();
     $(".message2").html(`You got ${correctGuesses} out of ${gridSize} correct!`);
     $(".showScore").html(`Your score: ${score}`);
-    console.log("score= " + score);
-    if (score > highScore) {
-        localStorage.setItem("highScore", score);
-        document.getElementById("high-score").innerHTML = localStorage.getItem("highScore");
-    }
 
+    if (score > highScore) {
+        highScore = score;
+        localStorage.setItem("highScore", score);
+        $("#high-score").html(localStorage.getItem("highScore"));
+        $(".high-score-message").html("Congratulations! New high score!");
+    }
 }
 
 // Function that returns the points for each game level
@@ -338,7 +336,7 @@ $("#play-again").click(function () {
     $("#correct").addClass("hidden");
     $("#play-again").addClass("hidden");
     $(".game-level").removeClass("hidden");
-
+    $(".high-score-message").html("");
     for (let i = 0; i < gridWidth; i++) {
         for (let j = 0; j < gridWidth; j++) {
             $(`#square-${i}-${j}`).css("backgroundColor", "lightgrey");
