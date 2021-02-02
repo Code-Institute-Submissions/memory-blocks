@@ -36,6 +36,15 @@ let gridWidth;
 let gridHeight;
 let gridSize;
 
+let highScore = localStorage.getItem("highScore");
+if (highScore !== null) {
+    document.getElementById("high-score").innerHTML = localStorage.getItem("highScore");
+}
+
+
+
+
+
 // Hide the colour picker until the playing time starts
 $(".colour-picker").hide();
 
@@ -266,6 +275,12 @@ function finishGame() {
     showWrongGuesses();
     $(".message2").html(`You got ${correctGuesses} out of ${gridSize} correct!`);
     $(".showScore").html(`Your score: ${score}`);
+    console.log("score= " + score);
+    if (score > highScore) {
+        localStorage.setItem("highScore", score);
+        document.getElementById("high-score").innerHTML = localStorage.getItem("highScore");
+    }
+
 }
 
 // Function that returns the points for each game level
@@ -354,3 +369,4 @@ anime.timeline()
         easing: "easeOutExpo",
         delay: 1000
     });
+
