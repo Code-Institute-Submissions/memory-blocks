@@ -9,6 +9,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("user_PLQesPVLRIyOZCs7SPhzI");
+        })();
+    </script>
     <title>Memory Blocks!</title>
 </head>
 
@@ -84,7 +91,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-8 text-left my-3">
-                            <form>
+                            <form onsubmit="return sendMail(this);">
                                 <label for="name">Name:</label>
                                 <input class="form-control mb-2" type="text" name="name" id="name" placeholder="Name"
                                     required>

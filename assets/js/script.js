@@ -39,7 +39,7 @@ let gridSize;
 // High Score
 let highScore = localStorage.getItem("highScore");
 if (highScore !== null) {
-    $("#high-score").html(localStorage.getItem("highScore"));
+    $("#high-score").html(highScore);
 }
 
 // Hide the colour picker until the playing time starts
@@ -368,3 +368,18 @@ anime.timeline()
         delay: 1000
     });
 
+
+function sendMail(contactForm) {
+    emailjs.send("service_ra2u0qi", "john_morgan", {
+        "from_name": contactForm.name.value,
+        "from_email": contactForm.email.value,
+        "message": contactForm.message.value
+    })
+        .then(function (response) {
+            console.log("Success", response);
+        },
+            function (error) {
+                consoloe.log("Failed", error);
+            });
+    return false; // To block from loading a new page
+}
