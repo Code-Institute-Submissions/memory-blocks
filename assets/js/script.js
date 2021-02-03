@@ -94,7 +94,8 @@ function generateGrid() {
     }
 }
 let copyOfGridColours, secondCopyOfGridColours;
-$("#easy").click(function () {
+
+function setUpEasyGame() {
     easyGame = true;
     mediumGame = false;
     hardGame = false;
@@ -113,9 +114,9 @@ $("#easy").click(function () {
     // Show the play button
     $("#play").removeClass("hidden");
     $(".message1").html("You have chosen Easy.");
-});
+}
 
-$("#medium").click(function () {
+function setUpMediumGame() {
     easyGame = false;
     mediumGame = true;
     hardGame = false;
@@ -133,9 +134,9 @@ $("#medium").click(function () {
     secondCopyOfGridColours = copyOfGridColours.slice();
     $("#play").removeClass("hidden");
     $(".message1").html("You have chosen Medium.");
-});
+}
 
-$("#hard").click(function () {
+function setUpHardGame() {
     easyGame = false;
     mediumGame = false;
     hardGame = true;
@@ -153,7 +154,11 @@ $("#hard").click(function () {
     secondCopyOfGridColours = copyOfGridColours.slice();
     $("#play").removeClass("hidden");
     $(".message1").html("You have chosen Hard, good luck!");
-});
+}
+
+$("#easy").click(setUpEasyGame);
+$("#medium").click(setUpMediumGame);
+$("#hard").click(setUpHardGame);
 
 // Test generateGrid function
 $("#play").click(function () {
@@ -192,11 +197,11 @@ function memorizingTime() {
 // Times are lower than what the actual game will be for testing purposes
 function calculateMemorizingTime() {
     if (easyGame) {
-        return 3;
+        return 10;
     } else if (mediumGame) {
-        return 6;
+        return 20;
     } else if (hardGame) {
-        return 9;
+        return 30;
     }
 }
 
@@ -204,11 +209,11 @@ function calculateMemorizingTime() {
 // Timers are lower than what the actual game will be for testing purposes
 function calculatePlayingTime() {
     if (easyGame) {
-        return 5;
+        return 20;
     } else if (mediumGame) {
-        return 7;
+        return 40;
     } else if (hardGame) {
-        return 9;
+        return 60;
     }
 }
 
