@@ -330,10 +330,11 @@ $("#correct").click(function () {
             $(`#square-${i}-${j}`).css("opacity", 1);
         }
     }
+    return false; // prevent page jump
 });
 
-// Function to reset game and play again
-$("#play-again").click(function () {
+// Function to reset game
+function resetGame() {
     $(".message1").html("Choose Easy, Medium or Hard!");
     $(".message2").html("");
     $(".showScore").html("");
@@ -349,7 +350,9 @@ $("#play-again").click(function () {
             $(`#square-${i}-${j}`).removeClass("add-X");
         }
     }
-});
+}
+
+$("#play-again").click(resetGame);
 
 /* Credit for text animation - Tobias Ahlin
    (https://tobiasahlin.com/moving-letters/#9)
