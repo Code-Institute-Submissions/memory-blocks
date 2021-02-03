@@ -200,3 +200,60 @@ describe("difficulty button functions", () => {
     });
 });
 
+describe("resetGame function", () => {
+    beforeEach(() => {
+        easyGame = true;
+        resetGame();
+    });
+    it(`should add the text "Choose Easy, Medium or Hard!" to the html element with the class message1`, () => {
+        expect($(".message1").text()).toEqual("Choose Easy, Medium or Hard!");
+    });
+    it(`should change the text of the html element with the class message2 to ""`, () => {
+        expect($(".message2").text()).toEqual("");
+    });
+    it(`should change the text of the html element with the class showScore to ""`, () => {
+        expect($(".showScore").text()).toEqual("");
+    });
+    it(`should change the text of the html element with the class timer to ""`, () => {
+        expect($(".timer").text()).toEqual("");
+    });
+    it(`should add class "hidden" to the html element with the id correct`, () => {
+        expect($("#correct")).toHaveClass("hidden");
+    });
+    it(`should add class "hidden" to the html element with the id play-again`, () => {
+        expect($("#play-again")).toHaveClass("hidden");
+    });
+    it(`should remove class "hidden" from the html element with the class game-level`, () => {
+        expect($(".game-level")).not.toHaveClass("hidden");
+    });
+    it(`should change the text of the html element with the class high-score-message to ""`, () => {
+        expect($(".high-score-message").text()).toEqual("");
+    });
+    it(`should remove class "add-X" to the html element with the id square-0-0`, () => {
+        expect($("#square-0-0")).not.toHaveClass("add-X");
+    });
+    it(`should remove class "add-X" to the html element with the id square-0-1`, () => {
+        expect($("#square-0-1")).not.toHaveClass("add-X");
+    });
+    it(`should remove class "add-X" to the html element with the id square-0-2`, () => {
+        expect($("#square-0-2")).not.toHaveClass("add-X");
+    });
+    it(`should remove class "add-X" to the html element with the id square-1-0`, () => {
+        expect($("#square-1-0")).not.toHaveClass("add-X");
+    });
+    it(`should remove class "add-X" to the html element with the id square-1-1`, () => {
+        expect($("#square-1-1")).not.toHaveClass("add-X");
+    });
+    it(`should remove class "add-X" to the html element with the id square-1-2`, () => {
+        expect($("#square-1-2")).not.toHaveClass("add-X");
+    });
+    it(`should remove class "add-X" to the html element with the id square-2-0`, () => {
+        expect($("#square-2-0")).not.toHaveClass("add-X");
+    });
+    it(`should remove class "add-X" to the html element with the id square-2-1`, () => {
+        expect($("#square-2-1")).not.toHaveClass("add-X");
+    });
+    it(`should remove class "add-X" to the html element with the id square-2-2`, () => {
+        expect($("#square-2-2")).not.toHaveClass("add-X");
+    });
+});
