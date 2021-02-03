@@ -77,14 +77,18 @@ describe("difficulty button functions", () => {
             <div id="square-0-3" class="cell"></div>
             <div id="square-1-3" class="cell"></div>
             <div id="square-2-3" class="cell"></div>
+            <div id="square-3-3" class="cell"></div>
             <div id="square-0-4" class="cell"></div>
             <div id="square-1-4" class="cell"></div>
             <div id="square-2-4" class="cell"></div>
+            <div id="square-3-4" class="cell"></div>
             `);
-        setUpEasyGame();
     });
 
     describe("setUpEasyGame function", () => {
+        beforeEach(() => {
+            setUpEasyGame();
+        })
         it("should set easyGame boolean to true", () => {
             expect(easyGame).toBe(true);
         });
@@ -115,7 +119,6 @@ describe("difficulty button functions", () => {
         it(`should add the text "You have chosen Easy." to the html element with the class message1`, () => {
             expect($(".message1").text()).toEqual("You have chosen Easy.");
         });
-
         it(`should add class "hidden" to the html element with the id square-0-3`, () => {
             expect($("#square-0-3")).toHaveClass("hidden");
         });
@@ -134,7 +137,66 @@ describe("difficulty button functions", () => {
         it(`should add class "hidden" to the html element with the id square-2-4`, () => {
             expect($("#square-2-4")).toHaveClass("hidden");
         });
-
     });
 
+    describe("setUpMediumGame function", () => {
+        beforeEach(() => {
+            setUpMediumGame();
+        })
+        it("should set easyGame boolean to false", () => {
+            expect(easyGame).toBe(false);
+        });
+        it("should set mediumGame boolean to true", () => {
+            expect(mediumGame).toBe(true);
+        });
+        it("should set hardGame boolean to false", () => {
+            expect(hardGame).toBe(false);
+        });
+        it("should set gridWidth to 4", () => {
+            expect(gridWidth).toBe(4);
+        });
+        it("should set gridHeight to 4", () => {
+            expect(gridHeight).toBe(4);
+        });
+        it("should set gridSize to 16", () => {
+            expect(gridSize).toBe(16);
+        });
+        it(`should remove class "hidden" from the html element with the class row3`, () => {
+            expect($(".row3")).not.toHaveClass("hidden");
+        });
+        it(`should add class "hidden" to the html element with the class row4`, () => {
+            expect($(".row4")).toHaveClass("hidden");
+        });
+        it(`should remove class "hidden" from the html element with the id play`, () => {
+            expect($("#play")).not.toHaveClass("hidden");
+        });
+        it(`should add the text "You have chosen Medium." to the html element with the class message1`, () => {
+            expect($(".message1").text()).toEqual("You have chosen Medium.");
+        });
+        it(`should remove class "hidden" from the html element with the id square-0-3`, () => {
+            expect($("#square-0-3")).not.toHaveClass("hidden");
+        });
+        it(`should remove class "hidden" from the html element with the id square-1-3`, () => {
+            expect($("#square-1-3")).not.toHaveClass("hidden");
+        });
+        it(`should remove class "hidden" from the html element with the id square-2-3`, () => {
+            expect($("#square-2-3")).not.toHaveClass("hidden");
+        });
+        it(`should remove class "hidden" from the html element with the id square-3-3`, () => {
+            expect($("#square-3-3")).not.toHaveClass("hidden");
+        });
+        it(`should add class "hidden" to the html element with the id square-0-4`, () => {
+            expect($("#square-0-4")).toHaveClass("hidden");
+        });
+        it(`should add class "hidden" to the html element with the id square-1-4`, () => {
+            expect($("#square-1-4")).toHaveClass("hidden");
+        });
+        it(`should add class "hidden" to the html element with the id square-2-4`, () => {
+            expect($("#square-2-4")).toHaveClass("hidden");
+        });
+        it(`should add class "hidden" to the html element with the id square-3-4`, () => {
+            expect($("#square-3-4")).toHaveClass("hidden");
+        });
+    });
 });
+
