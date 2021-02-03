@@ -43,4 +43,25 @@ describe("game timers", () => {
     });
 });
 
+describe("getPoints function", () => {
+    beforeEach(() => {
+        easyGame = false;
+        mediumGame = false;
+        hardGame = false;
+    });
 
+    it("should return 10", () => {
+        easyGame = true;
+        expect(getPoints()).toBe(10);
+    });
+
+    it("should return 20", () => {
+        mediumGame = true;
+        expect(getPoints()).toBe(20);
+    });
+
+    it("should return 30", () => {
+        hardGame = true;
+        expect(getPoints()).toBe(30);
+    });
+});
