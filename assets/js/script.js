@@ -5,7 +5,6 @@ const orange = "rgb(252, 136, 33)";
 const yellow = "rgb(250, 213, 0)";
 const green = "rgb(136, 199, 66)";
 const blue = "rgb(41, 171, 233)";
-// For easier debugging we will use the names of the colours
 const colourPickerColours = [red, orange, yellow, green, blue];
 
 // Colour picker divs
@@ -42,7 +41,7 @@ let copyOfGridColours, secondCopyOfGridColours;
 let time, timer;
 
 // Scoring system variables
-let score, points;
+let score, points, correctGuesses;
 let highScore = localStorage.getItem("highScore");
 if (highScore !== null) {
     $("#high-score").html(highScore);
@@ -168,7 +167,7 @@ function setUpHardGame() {
 $("#play").click(function () {
     generateGrid();
     $("#play").addClass("hidden");
-    $(".message1").html("Memorize the grid");
+    $(".message1").html("Memorize the grid...");
     // Hide the buttons to prevent user changing the grid size during a game
     $(".game-level").addClass("hidden");
     memorizingTime();
@@ -235,6 +234,10 @@ function playingTime() {
                 });
             }
         }
+        // Display "Hurry!" message when time reaches 5 seconds
+        if (time <= 5) {
+            $(".message1").html("Hurry!");
+        }
         if (time === 0) {
             clearInterval(timer);
             finishGame();
@@ -270,7 +273,7 @@ function finishGame() {
 function calculateScore() {
     /* Compare contents of the array containing the players guesses 
     to the array containing the original grid colours */
-    let correctGuesses = 0;
+    correctGuesses = 0;
     for (let i = 0; i < gridSize; i++) {
         if (playerColours[i] === copyOfGridColours[i]) {
             score += points;
