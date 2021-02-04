@@ -148,7 +148,7 @@ body {
   border-radius: 1rem;
   cursor: pointer;
   color: #e7e7e7;
-  font-size: 1rem;
+  font-size: 1.25rem;
   padding: 1em 2em;
   text-decoration: none;
   margin: 0.75rem;
@@ -157,6 +157,13 @@ body {
 .button:hover {
   text-decoration: none;
   color: lightgray;
+}
+
+.button-dark-green {
+    background: linear-gradient(to bottom, #01a001 5%, #36bf2a 100%);
+    background-color: #01a001;
+    border: 1px solid #30ab18;
+    text-shadow: 0px 1px 0px #27663a;
 }
 
 .button-green {
@@ -178,6 +185,11 @@ body {
     background-color: var(--red);
     border: 1px solid #d02718;
     text-shadow: 0px 1px 0px #810e05;
+}
+
+.button-dark-green:hover {
+  background: linear-gradient(to bottom, #2abf3e 15%, #44c78a 100%);
+  background-color: #2fbf2a;
 }
 
 .button-green:hover {
