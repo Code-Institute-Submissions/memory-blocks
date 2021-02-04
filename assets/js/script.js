@@ -262,10 +262,15 @@ function finishGame() {
         // Remove border for active colour
         colour.removeClass("clicked-color");
     }
+    calculateScore();
+    showWrongGuesses();
+}
+
+// Function to calculate player score
+function calculateScore() {
     /* Compare contents of the array containing the players guesses 
     to the array containing the original grid colours */
     let correctGuesses = 0;
-
     for (let i = 0; i < gridSize; i++) {
         if (playerColours[i] === copyOfGridColours[i]) {
             score += points;
@@ -273,15 +278,19 @@ function finishGame() {
         }
     }
 
-    // Do not display "Show Solution" button if player got all guesses correct
+    // Check for amount of correct guesses
     if (correctGuesses !== gridSize) {
+        // Do not display "Show Solution" button if player got all guesses correct
         $("#correct").removeClass("hidden");
+        $(".message2").html(`You got ${correctGuesses} out of ${gridSize} correct!`);
+    } else {
+        // Display perfect score message
+        $(".message2").html(`Perfect score! ${correctGuesses} out of ${gridSize}!`);
     }
 
-    showWrongGuesses();
-    $(".message2").html(`You got ${correctGuesses} out of ${gridSize} correct!`);
     $(".showScore").html(`Your score: ${score}`);
 
+    // Check for new high score
     if (score > highScore) {
         highScore = score;
         localStorage.setItem("highScore", score);
@@ -381,7 +390,6 @@ anime.timeline()
         easing: "easeOutExpo",
         delay: 1000
     });
-
 
 function sendMail(contactForm) {
     emailjs.send("service_ra2u0qi", "john_morgan", {
