@@ -1,4 +1,15 @@
-## User Experience (UX)
+<div align="center">
+    <h1>
+        <img src="assets/images/screnshot_home.PNG">
+    </h1>
+    <h2>
+        Memory Blocks is an entertaining and challenging memory game that is suitable for all ages, 
+        it can be played by anyone that can use a phone or any personal computing device!
+    </h2>
+    <h3><a href="https://johnny-morgan.github.io/memory-blocks/)">Click here</a> to view the site on GitHub pages.</h3>
+</div>
+
+## User Experience (UX) 
 
 - ### User Stories
 
