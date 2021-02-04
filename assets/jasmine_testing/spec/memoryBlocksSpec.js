@@ -198,10 +198,77 @@ describe("difficulty button functions", () => {
             expect($("#square-3-4")).toHaveClass("hidden");
         });
     });
+
+    describe("setUpHardGame function", () => {
+        beforeEach(() => {
+            setUpHardGame();
+        })
+        it("should set easyGame boolean to false", () => {
+            expect(easyGame).toBe(false);
+        });
+        it("should set mediumGame boolean to false", () => {
+            expect(mediumGame).toBe(false);
+        });
+        it("should set hardGame boolean to true", () => {
+            expect(hardGame).toBe(true);
+        });
+        it("should set gridWidth to 5", () => {
+            expect(gridWidth).toBe(5);
+        });
+        it("should set gridHeight to 5", () => {
+            expect(gridHeight).toBe(5);
+        });
+        it("should set gridSize to 25", () => {
+            expect(gridSize).toBe(25);
+        });
+        it(`should remove class "hidden" from the html element with the class row3`, () => {
+            expect($(".row3")).not.toHaveClass("hidden");
+        });
+        it(`should remove class "hidden" frmo the html element with the class row4`, () => {
+            expect($(".row4")).not.toHaveClass("hidden");
+        });
+        it(`should remove class "hidden" from the html element with the id play`, () => {
+            expect($("#play")).not.toHaveClass("hidden");
+        });
+        it(`should add the text "You have chosen Hard, good luck!" to the html element with the class message1`, () => {
+            expect($(".message1").text()).toEqual("You have chosen Hard, good luck!");
+        });
+        it(`should remove class "hidden" from the html element with the id square-0-3`, () => {
+            expect($("#square-0-3")).not.toHaveClass("hidden");
+        });
+        it(`should remove class "hidden" from the html element with the id square-1-3`, () => {
+            expect($("#square-1-3")).not.toHaveClass("hidden");
+        });
+        it(`should remove class "hidden" from the html element with the id square-2-3`, () => {
+            expect($("#square-2-3")).not.toHaveClass("hidden");
+        });
+        it(`should remove class "hidden" from the html element with the id square-3-3`, () => {
+            expect($("#square-3-3")).not.toHaveClass("hidden");
+        });
+        it(`should remove class "hidden" from the html element with the id square-4-3`, () => {
+            expect($("#square-4-3")).not.toHaveClass("hidden");
+        });
+        it(`should remove class "hidden" from the html element with the id square-0-4`, () => {
+            expect($("#square-0-4")).not.toHaveClass("hidden");
+        });
+        it(`should remove class "hidden" from the html element with the id square-1-4`, () => {
+            expect($("#square-1-4")).not.toHaveClass("hidden");
+        });
+        it(`should remove class "hidden" from the html element with the id square-2-4`, () => {
+            expect($("#square-2-4")).not.toHaveClass("hidden");
+        });
+        it(`should remove class "hidden" from the html element with the id square-3-4`, () => {
+            expect($("#square-3-4")).not.toHaveClass("hidden");
+        });
+        it(`should remove class "hidden" from the html element with the id square-4-4`, () => {
+            expect($("#square-4-4")).not.toHaveClass("hidden");
+        });
+    });
 });
 
 describe("resetGame function", () => {
     beforeEach(() => {
+        // test for easy game
         easyGame = true;
         resetGame();
     });
