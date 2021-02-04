@@ -44,6 +44,11 @@
     
     ![Image](assets/images/palette.png)
 
+  - #### Typography
+
+    [Salsa](https://fonts.google.com/specimen/Salsa?query=salsa&preview.text_type=custom#standard-styles) was chosen as the main font for this website with cursive as the fallback font.
+    Salsa is a fun and elegant font which is appealing to both children and adults.
+
 ## Technologies Used
 
 ### Languages Used
