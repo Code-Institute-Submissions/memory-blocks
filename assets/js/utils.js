@@ -29,10 +29,17 @@ function sendMail(contactForm) {
         "message": contactForm.message.value
     })
         .then(function (response) {
-            console.log("Success", response);
+            $("#contact").modal("hide");
         },
             function (error) {
                 consoloe.log("Failed", error);
             });
     return false; // To block from loading a new page
 }
+
+$('#contact').on('hidden.bs.modal', function (e) {
+    $(this)
+        .find("#name").val("").end()
+        .find("#email").val("").end()
+        .find("#message").val("").end();
+})
