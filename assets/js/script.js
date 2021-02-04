@@ -36,7 +36,13 @@ let gridWidth;
 let gridHeight;
 let gridSize;
 
-// High Score
+let copyOfGridColours, secondCopyOfGridColours;
+
+// Memorizing and playing times variables
+let time, timer;
+
+// Scoring system variables
+let score, points;
 let highScore = localStorage.getItem("highScore");
 if (highScore !== null) {
     $("#high-score").html(highScore);
@@ -93,8 +99,8 @@ function generateGrid() {
         }
     }
 }
-let copyOfGridColours, secondCopyOfGridColours;
 
+// Set up variables and UI for Easy game
 function setUpEasyGame() {
     easyGame = true;
     mediumGame = false;
@@ -116,6 +122,7 @@ function setUpEasyGame() {
     $(".message1").html("You have chosen Easy.");
 }
 
+// Set up variables and UI for Medium game
 function setUpMediumGame() {
     easyGame = false;
     mediumGame = true;
@@ -136,6 +143,7 @@ function setUpMediumGame() {
     $(".message1").html("You have chosen Medium.");
 }
 
+// Set up variables and UI for Hard game
 function setUpHardGame() {
     easyGame = false;
     mediumGame = false;
@@ -156,10 +164,6 @@ function setUpHardGame() {
     $(".message1").html("You have chosen Hard, good luck!");
 }
 
-$("#easy").click(setUpEasyGame);
-$("#medium").click(setUpMediumGame);
-$("#hard").click(setUpHardGame);
-
 // Test generateGrid function
 $("#play").click(function () {
     generateGrid();
@@ -171,8 +175,7 @@ $("#play").click(function () {
     setTimeout(playingTime, (time + 1) * 1000);
 });
 
-let time, timer;
-
+// Memorizing Time function
 function memorizingTime() {
     time = calculateMemorizingTime();
     timer = setInterval(function () {
@@ -217,6 +220,7 @@ function calculatePlayingTime() {
     }
 }
 
+// Playing time function
 function playingTime() {
     time = calculatePlayingTime();
     $(".colour-picker").show();
@@ -239,7 +243,7 @@ function playingTime() {
     }, 1000);
 };
 
-let score, points;
+// Function for finishing the game
 function finishGame() {
     clearInterval(timer);
     playerColours = [];
@@ -320,8 +324,6 @@ function showWrongGuesses() {
     }
 }
 
-$("#finish").click(finishGame);
-
 // Function to show solution
 $("#correct").click(function () {
     for (let i = 0; i < gridWidth; i++) {
@@ -352,6 +354,10 @@ function resetGame() {
     }
 }
 
+$("#easy").click(setUpEasyGame);
+$("#medium").click(setUpMediumGame);
+$("#hard").click(setUpHardGame);
+$("#finish").click(finishGame);
 $("#play-again").click(resetGame);
 
 /* Credit for text animation - Tobias Ahlin
