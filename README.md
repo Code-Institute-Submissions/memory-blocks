@@ -1,3 +1,28 @@
+## User Experience (UX)
+
+- ### User Stories
+
+    As a player, I want:
+ 
+    1. A game that will help sharpen my memory, so I can boost my memory performance in other areas of my life.
+    2. A game that that has different levels of difficulty, so I can continue to challenge myself as my memory skills improve.
+    3. To be able to keep track of my high score, so I can challenge myself to beat it.
+    4. A challenging game, so I can feel a sense of achievement when I play well in the game.
+    5. A game that I can play on all devices, so I can play it any time or place.
+ 
+    As a young player, I want:
+
+    1. A game that is simple and intuitive to play, so I do not need to spend too much time learning how to play the game.
+    2. Easy controls for the game, so I can play the game comfortably and effortlessly.
+    3. A game that is fun to play, so I can share and play with my family and friends.
+    
+    As an adult player or parent, I want:
+
+    1. A game I can play with my children, so I can spend more time having fun with them.
+    2. The ability to contact the developer of the game, so I can report any bugs or offer suggestions.
+    3. Simple instructions for the game, so I can easily learn how to play the game and instruct younger children how to play. 
+
+
 - ### Wireframes
 
   The wireframes for this project were created using Balsamiq.
