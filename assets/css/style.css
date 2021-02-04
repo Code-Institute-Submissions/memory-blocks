@@ -90,11 +90,11 @@ body {
 .icon {
     font-size: 600%;
     text-decoration: none;
-    color: darkred;
+    color: var(--red);
 }
 
 .icon:hover{
-    color: var(--red);
+    color: darkred;
 }
 
 /***** COLOUR PICKER *****/
@@ -283,6 +283,10 @@ footer {
     .button {
         padding: .75em 1.5em;
     }
+
+    .back-button {
+        display: none;
+    }
 }
 
 @media (max-width: 576px) {
@@ -296,4 +300,28 @@ footer {
     .button {
         font-size: 90%;
     }
+
+    .back-button {
+        display: none;
+    }
+
+    footer {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .hidden-button {
+        display: none;
+    }
+}
+
+.back-button {
+   position: fixed;
+   top: 40%;
+}
+
+.hidden-button {
+    margin-top: 4rem;
+    font-size: 50%;
 }
