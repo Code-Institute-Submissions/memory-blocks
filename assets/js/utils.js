@@ -1,9 +1,12 @@
+'use strict';
 // Home page tagline animation
 
 /* Credit for text animation - Tobias Ahlin
    (https://tobiasahlin.com/moving-letters/#9)
 */
 // Wrap every letter in a span
+
+let anime;
 let textWrapper = document.querySelector('.ml9 .letters');
 textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
@@ -22,6 +25,7 @@ anime.timeline()
         delay: 1000
     });
 
+let emailjs;
 function sendMail(contactForm) {
     emailjs.send("service_ra2u0qi", "john_morgan", {
         "from_name": contactForm.name.value,
@@ -33,7 +37,7 @@ function sendMail(contactForm) {
             $(".contact-form-message").html("Message sent successfully, thank you!");
         },
             function () {
-                $(".contact-form-message").html("Error! Message not sent. Please try again.")
+                $(".contact-form-message").html("Error! Message not sent. Please try again.");
             });
     return false; // To block from loading a new page
 }
