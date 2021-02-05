@@ -91,10 +91,12 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="col-12 modal-title">Contact Me</h4>
+                    <h3 class="col-12 modal-title">Contact Me</h3>
                 </div>
+                <br>
                 <div class="container">
                     <div class="row">
+                        <h5>Comments/suggestions are welcome!</h5>
                         <div class="col-lg-8 text-left my-3">
                             <form onsubmit="return sendMail(this);">
                                 <label for="name">Name:</label>
@@ -105,7 +107,7 @@
                                     placeholder="Email Address" required>
                                 <label for="message">Message:</label>
                                 <textarea class="form-control mb-2" name="message" id="message" cols="30" rows="10"
-                                    placeholder="Type your message here"></textarea>
+                                    placeholder="Type your message here" required></textarea>
                                 <button type="submit" class="button button-green button-small">Send</button>
                                 <button type="button" class="button button-red button-small"
                                     data-dismiss="modal">Cancel</button>
