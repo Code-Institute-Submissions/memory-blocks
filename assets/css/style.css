@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 @import url("https://fonts.googleapis.com/css2?family=Salsa&display=swap");
 
 /***** COLOURS *****/
@@ -41,7 +48,8 @@ body {
     padding: 0;
     min-height: 100vh;
     font-family: "Salsa", cursive;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     background-image: var(--bg-gradient);
     background-repeat: no-repeat;
     text-align: center;
@@ -71,7 +79,18 @@ body {
     -webkit-background-clip: text;
     color: transparent;
     background-size: 400%;
-    animation: bg-animation 10s infinite alternate;
+    -webkit-animation: bg-animation 10s infinite alternate;
+            animation: bg-animation 10s infinite alternate;
+}
+
+
+@-webkit-keyframes bg-animation {
+    0% {
+        background-position: left;
+    }
+    100% {
+        background-position: right;
+    }
 }
 
 @keyframes bg-animation {
@@ -99,9 +118,16 @@ body {
 
 /***** COLOUR PICKER *****/
 .colour-picker {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     
 }
 
@@ -124,7 +150,9 @@ body {
 }
 
 .row {
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .cell {
@@ -160,6 +188,8 @@ body {
 }
 
 .button-dark-green {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #01a001), to(#36bf2a));
+    background: -o-linear-gradient(top, #01a001 5%, #36bf2a 100%);
     background: linear-gradient(to bottom, #01a001 5%, #36bf2a 100%);
     background-color: #01a001;
     border: 1px solid #30ab18;
@@ -167,6 +197,8 @@ body {
 }
 
 .button-green {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, var(--green)), to(#5cbf2a));
+    background: -o-linear-gradient(top, var(--green) 5%, #5cbf2a 100%);
     background: linear-gradient(to bottom, var(--green) 5%, #5cbf2a 100%);
     background-color: var(--green);
     border: 1px solid #18ab29;
@@ -174,6 +206,8 @@ body {
 }
 
 .button-orange {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, var(--orange)), to(#df6502));
+    background: -o-linear-gradient(top, var(--orange) 5%, #df6502 100%);
     background: linear-gradient(to bottom, var(--orange) 5%, #df6502 100%);
     background-color: var(--orange);
     border: 1px solid #da8402;
@@ -181,6 +215,8 @@ body {
 }
 
 .button-red {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, var(--red)), to(#f24437));
+    background: -o-linear-gradient(top, var(--red) 5%, #f24437 100%);
     background: linear-gradient(to bottom, var(--red) 5%, #f24437 100%);
     background-color: var(--red);
     border: 1px solid #d02718;
@@ -188,21 +224,29 @@ body {
 }
 
 .button-dark-green:hover {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(15%, #2abf3e), to(#44c78a));
+  background: -o-linear-gradient(top, #2abf3e 15%, #44c78a 100%);
   background: linear-gradient(to bottom, #2abf3e 15%, #44c78a 100%);
   background-color: #2fbf2a;
 }
 
 .button-green:hover {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(15%, #5cbf2a), to(#44c767));
+  background: -o-linear-gradient(top, #5cbf2a 15%, #44c767 100%);
   background: linear-gradient(to bottom, #5cbf2a 15%, #44c767 100%);
   background-color: #5cbf2a;
 }
 
 .button-orange:hover {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(15%, #f27c37), to(#c6831f));
+  background: -o-linear-gradient(top, #f27c37 15%, #c6831f 100%);
   background: linear-gradient(to bottom, #f27c37 15%, #c6831f 100%);
   background-color: #f26337;
 }
 
 .button-red:hover {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(15%, #f24437), to(#c62d1f));
+  background: -o-linear-gradient(top, #f24437 15%, #c62d1f 100%);
   background: linear-gradient(to bottom, #f24437 15%, #c62d1f 100%);
   background-color: #f24437;
 }
@@ -238,7 +282,9 @@ footer {
 }
 
 .ml9 .letter {
-  transform-origin: 50% 100%;
+  -webkit-transform-origin: 50% 100%;
+      -ms-transform-origin: 50% 100%;
+          transform-origin: 50% 100%;
   display: inline-block;
   line-height: 1em;
 }
@@ -285,7 +331,10 @@ footer {
 /***** MEDIA QUERIES *****/
 @media (max-width: 768px) {
     .colour-picker {
-        flex-direction: row;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
         margin-top: 2rem;
     }
 
