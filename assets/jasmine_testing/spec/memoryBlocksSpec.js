@@ -272,9 +272,6 @@ describe("resetGame function", () => {
         easyGame = true;
         resetGame();
     });
-    it(`should add the text "Choose Easy, Medium or Hard!" to the html element with the class message1`, () => {
-        expect($(".message1").text()).toEqual("Choose Easy, Medium or Hard!");
-    });
     it(`should change the text of the html element with the class message2 to ""`, () => {
         expect($(".message2").text()).toEqual("");
     });
@@ -283,12 +280,6 @@ describe("resetGame function", () => {
     });
     it(`should change the text of the html element with the class timer to ""`, () => {
         expect($(".timer").text()).toEqual("");
-    });
-    it(`should add class "hidden" to the html element with the id correct`, () => {
-        expect($("#correct")).toHaveClass("hidden");
-    });
-    it(`should add class "hidden" to the html element with the id play-again`, () => {
-        expect($("#play-again")).toHaveClass("hidden");
     });
     it(`should remove class "hidden" from the html element with the class game-level`, () => {
         expect($(".game-level")).not.toHaveClass("hidden");

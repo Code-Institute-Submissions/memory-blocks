@@ -46,3 +46,7 @@ $('#contact').on('hidden.bs.modal', function (e) {
         .find("#message").val("").end();
 });
 
+// Remove contact form message if present
+$(".icon").click(function () {
+    $(".contact-form-message").html("");
+});
