@@ -32,4 +32,26 @@
 
         - Memory Blocks is a fully responsive website and can be played on all mobile phone devices as well as tablets, laptops and desktop computers.
  
-    
+    As a young player, I want:
+
+    1. A game that is simple and intuitive to play, so I do not need to spend too much time learning how to play the game.
+
+        - Memory Blocks is a very simple game to play, the goal of the game is to memorize a grid of coloured squares before a timer runs out. When 
+        the timer reaches zero the coloured squares of the grid turn grey. Using their memory the player must then fill in the grid again. They simply
+        choose a colour from the colour picker by clicking on it and then click on a square in the grid to fill that square with the chosen colour. The 
+        game ends when the timer reaches zero. The player has the option to end the game before the timer runs out by clicking on the finish button. Messages
+        are displayed a certain points during the game guiding the player on the relevant step to take such as memorizing the grid or filling in the grid.
+
+    2. Easy controls for the game, so I can play the game comfortably and effortlessly.
+
+        - The controls are easy to understand and implement. A series of click events are all that is required to play the game. The player simply clicks on the 
+        relevant button to choose a level and clicks on the start button to play. To choose a colour they simply click on one of the coloured squares above the game grid. 
+        The grid is filled in by clicking on the each square of the grid. The game is ended by clicking on the finish button or by letting the timer run down. A 
+        show solution button can then be clicked to show the correct solution. They can then click the play again button to start a new game. There is no typing 
+        needed during the game so the use of a keyboard is not required. 
+
+    3. A game that is fun and exciting to play, so I can share and play with my family and friends.
+
+        - At the end of each game the player receives a score for their effort. They can then compete with family members and friends to try and beat each others
+        scores. A sense of competition brings entertaininment and it motivates players to outperform others and allows them to assess their performance against the
+        performance of others. The vibrant colour scheme of the website adds energy and the countdown timer adds tension to the game as the counter approaches zero.
