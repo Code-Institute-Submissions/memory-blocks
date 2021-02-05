@@ -28,18 +28,21 @@ function sendMail(contactForm) {
         "from_email": contactForm.email.value,
         "message": contactForm.message.value
     })
-        .then(function (response) {
+        .then(function () {
             $("#contact").modal("hide");
+            $(".contact-form-message").html("Message sent successfully, thank you!");
         },
-            function (error) {
-                consoloe.log("Failed", error);
+            function () {
+                $(".contact-form-message").html("Error! Message not sent. Please try again.")
             });
     return false; // To block from loading a new page
 }
 
+// Clear contact form on send
 $('#contact').on('hidden.bs.modal', function (e) {
     $(this)
         .find("#name").val("").end()
         .find("#email").val("").end()
         .find("#message").val("").end();
-})
+});
+
