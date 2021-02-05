@@ -95,9 +95,11 @@
                     </div>
                 </div>
                 <div class="timer"></div>
-                <div class="back-button mx-5"><a href="index.html" class="icon"><i class="fas fa-arrow-left"></i></a>
+                <div class="back-button mx-5"><a href="index.html" class="icon" data-toggle="tooltip" title="Home"><i
+                            class="fas fa-arrow-left"></i></a>
                 </div>
-                <div class="hidden-button"><a href="index.html" class="icon"><i class="fas fa-home"></i></a>
+                <div class="hidden-button"><a href="index.html" class="icon" data-toggle="tooltip" title="Home"><i
+                            class="fas fa-home"></i></a>
                 </div>
             </div>
         </div>
@@ -113,6 +115,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
     <script src="assets/js/game.js"></script>
 </body>
 
