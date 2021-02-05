@@ -18,8 +18,15 @@
 
         - The game has three levels of difficulty, easy, medium and hard. Each jump in level significantly increases the difficulty of the game. 
         Moving from the easy level to medium level results in the amount of coloured squares that need to be remembered increasing from 9 to 16, 
-        an increse in 78%. The jump to the hard level increases the cells to 25 which is a 56% increase on the medium level and motivates the player 
+        an increase in 78%. The jump to the hard level increases the cells to 25 which is a 56% increase on the medium level and motivates the player 
         to work harder on their memory skills.
+
+        <div align="center">
+        <br>
+        <img src="assets/images/testing_images/easy_level.png" alt="Screenshot: easy level">
+        <img src="assets/images/testing_images/medium_level.png" alt="Screenshot: medium level">
+        <img src="assets/images/testing_images/hard_level.png" alt="Screenshot: hard level">
+        </div>
 
     3. To be able to keep track of my high score, so I can challenge myself to beat it.
 
@@ -27,7 +34,13 @@
         dislpayed congratulating them on achieving a new highscore. Their highscore is displayed at the top of the game page and is stored in the 
         local storage on their device. Therefore when they return to the website at a later date their highscore is still available and 
         displayed for them.
-
+        
+        <div align="center">
+        <br>
+        <img src="assets/images/testing_images/highscore.png" alt="Screenshot: high score message"><br><br>
+        <img src="assets/images/testing_images/highscore_msg.png" alt="Screenshot: high score">
+        </div>
+          
     4. A game that I can play on all devices, so I can play it at any time or place.
 
         - Memory Blocks is a fully responsive website and can be played on all mobile phone devices as well as tablets, laptops and desktop computers.
@@ -42,6 +55,11 @@
         game ends when the timer reaches zero. The player has the option to end the game before the timer runs out by clicking on the finish button. Messages
         are displayed a certain points during the game guiding the player on the relevant step to take such as memorizing the grid or filling in the grid.
 
+        <div align="center">
+        <br>
+        <img src="assets/images/testing_images/playing_time.png" alt="Screenshot: playing time">
+        </div>
+
     2. Easy controls for the game, so I can play the game comfortably and effortlessly.
 
         - The controls are easy to understand and implement. A series of click events are all that is required to play the game. The player simply clicks on the 
@@ -55,3 +73,36 @@
         - At the end of each game the player receives a score for their effort. They can then compete with family members and friends to try and beat each others
         scores. A sense of competition brings entertaininment and it motivates players to outperform others and allows them to assess their performance against the
         performance of others. The vibrant colour scheme of the website adds energy and the countdown timer adds tension to the game as the counter approaches zero.
+         
+        <div align="center">
+        <br>
+        <img src="assets/images/testing_images/score.png" alt="Screenshot: player score">
+        </div>
+
+    As an adult player or parent/grandparent, I want:
+
+    1. A game I can play with my children/grandchildren, so I can spend more time having fun with them.
+
+        - Memory Blocks is suitable for all ages. By challenging each other to beat their scores, Memory Blocks allows parent/granparents to spend more fun time with 
+        their children/grandchildren, all while developing and improving their memory skills.
+
+    2. The ability to contact the developer of the game, so I can report any bugs or offer suggestions.
+
+        - An email icon is provided on the home screen which when clicked opens a modal. The modal contains a contact form which the user can fill
+        in to contact the site owner. A message is displayed on the home screen when the user fills out the form and sends it confirming whether or not the
+        message was sent successfully.
+        
+        <div align="center">
+        <br>
+        <img src="assets/images/testing_images/contact_form.png" alt="Screenshot: contact form">
+        </div>
+
+    3. Simple instructions for the game, so I can easily learn how to play the game and instruct younger children how to play. 
+
+        - A question mark icon is provided on the home screen which when clicked opens a modal. The modal contains a set of clear 
+        and precise instructions on how to play the game.
+
+        <div align="center">
+        <br>
+        <img src="assets/images/testing_images/instructions.png" alt="Screenshot: instructions">
+        </div>
