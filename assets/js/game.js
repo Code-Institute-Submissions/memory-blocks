@@ -193,7 +193,7 @@ function memorizingTime() {
         }
         time--;
     }, 1000);
-};
+}
 
 // Function that returns the time allowed for the player for memorizing the grid
 // Times are lower than what the actual game will be for testing purposes
@@ -244,7 +244,7 @@ function playingTime() {
         }
         time--;
     }, 1000);
-};
+}
 
 // Function for finishing the game
 function finishGame() {
