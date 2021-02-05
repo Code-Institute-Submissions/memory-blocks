@@ -2,6 +2,29 @@
 
 ### Testing Overview
 
+### Validation
+
+- The [W3C Markup Validator](https://validator.w3.org/#validate_by_input) service was used to validate the HTML code of the project.
+  
+- The [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) service was used to validate the CSS code. No errors were found.
+
+- [JSHint](https://jshint.com/) was used to validate the JavaScript code of the project.
+
+#### JSHint Validation results
+
+- Testing game.js
+
+    - No major errors were found. Four warnings were produced, two were very minor and involved two missing semicolons which did not affect the running of 
+    the program. The other two warnings stated that functions declared within loops referencing an outer scoped variable may lead to confusing semantics. 
+    This referred to the variable activeColor and does not affect the running of the program. The functions could be refactored in subsequent updates.
+
+- Testing utils.js
+
+    - No major errors were found. Three warnings were produced, a semicolon was missing which was added and did not affect the running of the program. The 
+    other two warnings stated that there was two undefined variables namely anime and emailjs. These were then declared inside the script to remove this warning. 
+    The sendMail variable was declared as unused. This function is called in the form element of the index.html file.
+
+
 ### Testing User Stories from User Experience (UX) Section
 
 - As a player, I want:
@@ -45,7 +68,7 @@
 
         - Memory Blocks is a fully responsive website and can be played on all mobile phone devices as well as tablets, laptops and desktop computers.
  
-    As a young player, I want:
+- As a young player, I want:
 
     1. A game that is simple and intuitive to play, so I do not need to spend too much time learning how to play the game.
 
@@ -79,7 +102,7 @@
         <img src="assets/images/testing_images/score.png" alt="Screenshot: player score">
         </div>
 
-    As an adult player or parent/grandparent, I want:
+- As an adult player or parent/grandparent, I want:
 
     1. A game I can play with my children/grandchildren, so I can spend more time having fun with them.
 
