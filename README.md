@@ -95,11 +95,11 @@
 
 - [Google Fonts](https://fonts.google.com/)
 
-  - Google Fonts is used to obtain the Roboto Condensed font family.
+  - Google Fonts is used to obtain the Salsa font.
 
 - [Font Awesome](https://fontawesome.com/)
 
-  - Font Awesome is used to obtain the icons used in the Contact Me section.
+  - Font Awesome is used to obtain the icons used in this website.
 
 ## Testing
 
