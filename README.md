@@ -7,6 +7,40 @@
     <h3><a href="https://johnny-morgan.github.io/memory-blocks/" target="_blank">Click here</a> to view the site on GitHub pages.</h3>
 </div>
 
+## Overview
+
+The fundamental objective of this website is to provide an engaging and stimulating memory game that is suitable for everyone.
+
+Business Goals
+
+  - Create a challenging game
+
+    - Memory Blocks challenges the player to remember a grid made up of between 9 and 25 squares depending on the level of difficulty. 
+    Each square has a colour that the player must remember under a certain time limit. They must then reproduce the grid from memory before a 
+    second timer reaches zero. Remembering a large amount under a time constraint is an exceptionaly challenging task.
+
+  - Provide a cognitively stimulating experience
+
+    - Short-term memory is key to playing Memory Blocks and playing often will improve function in this area. Playing this game can improve 
+    other brain functions, such as attention, concentration, and focus. 
+
+  - A game that appeals to all ages
+
+    - The uncomplicated gameplay of Memory Blocks ensures that it is a game that can be played by everyone. Improving your memory is a skill 
+    that everyone can develop.
+
+Player goals
+
+  - An fun and exciting game to play
+
+    - The countdown timer introduces an element of tension 
+
+  - An easy to navigate website, especially important for young players
+
+    - The website consists of two pages, the home page and the game page. Large icons on the home page can be clicked that provide players with 
+    instructions on how to play the game and an option to contact the developer. The game page contains large and colourful buttons and icons to 
+    return to the home page.
+
 ## User Experience (UX) 
 
 - ### User Stories
@@ -24,9 +58,9 @@
     2. Easy controls for the game, so I can play the game comfortably and effortlessly.
     3. A game that is fun and exciting to play, so I can share and play with my family and friends.
     
-    As an adult player or parent, I want:
+    As an adult player or parent/grandparent, I want:
 
-    1. A game I can play with my children, so I can spend more time having fun with them.
+    1. A game I can play with my children/grandchildren, so I can spend more time having fun with them.
     2. The ability to contact the developer of the game, so I can report any bugs or offer suggestions.
     3. Simple instructions for the game, so I can easily learn how to play the game and instruct younger children how to play. 
 
