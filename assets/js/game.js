@@ -179,7 +179,7 @@ function memorizingTime() {
     time = calculateMemorizingTime();
     timer = setInterval(function () {
         $(".timer").html(time);
-        if (time === 0) {
+        if (time <= 0) {
             clearInterval(timer);
             $(".timer").html("GO!");
             $(".message1").html("Fill in the grid!");
@@ -199,11 +199,11 @@ function memorizingTime() {
 // Times are lower than what the actual game will be for testing purposes
 function calculateMemorizingTime() {
     if (easyGame) {
-        return 10;
+        return 3;
     } else if (mediumGame) {
-        return 20;
+        return 4;
     } else if (hardGame) {
-        return 30;
+        return 5;
     }
 }
 
@@ -211,11 +211,11 @@ function calculateMemorizingTime() {
 // Timers are lower than what the actual game will be for testing purposes
 function calculatePlayingTime() {
     if (easyGame) {
-        return 20;
+        return 5;
     } else if (mediumGame) {
-        return 40;
+        return 6;
     } else if (hardGame) {
-        return 60;
+        return 7;
     }
 }
 
@@ -238,7 +238,7 @@ function playingTime() {
         if (time <= 5) {
             $(".message1").html("Hurry!");
         }
-        if (time === 0) {
+        if (time <= 0) {
             clearInterval(timer);
             finishGame();
         }
