@@ -6,7 +6,6 @@
 */
 // Wrap every letter in a span
 
-let anime;
 let textWrapper = document.querySelector('.ml9 .letters');
 textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
@@ -25,7 +24,6 @@ anime.timeline()
         delay: 1000
     });
 
-let emailjs;
 function sendMail(contactForm) {
     emailjs.send("service_ra2u0qi", "john_morgan", {
         "from_name": contactForm.name.value,
