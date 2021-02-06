@@ -181,6 +181,8 @@ function memorizingTime() {
         $(".timer").html(time);
         if (time === 0) {
             clearInterval(timer);
+            $(".colour-picker").show();
+            $("#finish").removeClass("hidden");
             $(".timer").html("GO!");
             $(".message1").html("Fill in the grid!");
             $(".colour-picker").css("pointer-events", "auto");
@@ -222,8 +224,6 @@ function calculatePlayingTime() {
 // Playing time function
 function playingTime() {
     time = calculatePlayingTime();
-    $(".colour-picker").show();
-    $("#finish").removeClass("hidden");
     $("#grid-area").css("pointer-events", "auto");
     timer = setInterval(function () {
         $(".timer").html(time);
