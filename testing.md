@@ -10,6 +10,17 @@
 
 - [JSHint](https://jshint.com/) was used to validate the JavaScript code of the project.
 
+#### W3C Markup Validator results
+
+- index.html
+
+    - No errors were found. Two warnings were found - "The type attribute is unnecessary for JavaScript resources". This warning referred to the two scripts contained
+    in the file. The code `type="text/javascript"` was deleted to remove this warning.
+
+- game.html
+
+    - No errors or warnings were found. 
+
 #### JSHint Validation results
 
 - Testing game.js
