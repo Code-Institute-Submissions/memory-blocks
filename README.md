@@ -79,6 +79,33 @@ Player goals
 
   - [Contact Form Modal](https://github.com/Johnny-Morgan/memory-blocks/blob/master/assets/docs/wireframes_contact_form_modal.pdf).
 
+## Features
+
+### Existing Features
+
+- ### Homepage Features
+
+    ![Image](assets/images/homepage.png)
+
+    1. Instructions Modal
+
+        - By clicking on the question mark icon, a modal is displayed with a clear set of instructions on how to play the game. The modal can be closed
+      by clicking on the close button or by clicking outside of the modal.
+    
+            ![Image](assets/images/testing_images/instructions.png)
+
+    2. Contact Form Modal
+
+        - By clicking on the email icon, a modal is displayed with a contact form to contact the developer. The modal can be closed without sending a 
+      message by clicking on the close button or by clicking outside of the modal. The user must fill in each section of the form before they can 
+      send it. A message appears on the home page after they click send telling the user whether the message was sent successfully or not.
+    
+            ![Image](assets/images/testing_images/contact_form.png)
+
+    3. Play Button
+
+        - The play button directs the user to the game page.
+
 - ### Design
 
   - #### Colour Scheme
