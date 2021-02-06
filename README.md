@@ -106,6 +106,33 @@ Player goals
 
         - The play button directs the user to the game page.
 
+- ### Gamepage Features
+
+    - Pre-game
+
+        ![Image](assets/images/gamepage.png)
+
+    1. Highscore
+
+        - A highscore is displayed at the top of the screen. The highscore is set to zero if the game has not been played before. When a player sets a 
+        new highscore, their highscore is saved in local storage and displayed every time they play the game on the same device.
+    
+    2. The game grid
+
+        - The game grid is displayed below the highscore. The size of the grid varies depending on the level chosen. Currently the grid is set to the hard
+        level when the page loads. 
+
+    3. Level buttons
+
+        - The player has a choice of three levels, easy medium and hard. Each button is clearly labeled with a different colour for each level. A message
+        below the buttons prompts the player to choose a level. By clicking on a button the size of the grid changes according to the table below. A play button
+        is then displayed which starts the game when clicked.
+
+            |                	| Easy  	| Medium 	| Hard  	|
+            |----------------	|-------	|--------	|-------	|
+            | Grid Size      	| 3 x 3 	| 4 x 4  	| 5 x 5 	|
+            | No. of squares 	| 9     	| 16     	| 25    	|
+
 - ### Design
 
   - #### Colour Scheme
