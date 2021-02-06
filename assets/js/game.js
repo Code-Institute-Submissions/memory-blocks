@@ -179,7 +179,7 @@ function memorizingTime() {
     time = calculateMemorizingTime();
     timer = setInterval(function () {
         $(".timer").html(time);
-        if (time <= 0) {
+        if (time === 1) {
             clearInterval(timer);
             $(".timer").html("GO!");
             $(".message1").html("Fill in the grid!");
@@ -238,7 +238,7 @@ function playingTime() {
         if (time <= 5) {
             $(".message1").html("Hurry!");
         }
-        if (time <= 0) {
+        if (time === 1) {
             clearInterval(timer);
             finishGame();
         }
