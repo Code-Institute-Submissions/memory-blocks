@@ -171,7 +171,7 @@ $("#play").click(function () {
     // Hide the buttons to prevent user changing the grid size during a game
     $(".game-level").addClass("hidden");
     memorizingTime();
-    setTimeout(playingTime, (time + 1) * 1000);
+    setTimeout(playingTime, (time + 2) * 1000);
 });
 
 // Memorizing Time function
@@ -179,7 +179,7 @@ function memorizingTime() {
     time = calculateMemorizingTime();
     timer = setInterval(function () {
         $(".timer").html(time);
-        if (time === 1) {
+        if (time === 0) {
             clearInterval(timer);
             $(".timer").html("GO!");
             $(".message1").html("Fill in the grid!");
@@ -238,7 +238,7 @@ function playingTime() {
         if (time <= 5) {
             $(".message1").html("Hurry!");
         }
-        if (time === 1) {
+        if (time === 0) {
             clearInterval(timer);
             finishGame();
         }
