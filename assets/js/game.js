@@ -171,7 +171,7 @@ $("#play").click(function () {
     // Hide the buttons to prevent user changing the grid size during a game
     $(".game-level").addClass("hidden");
     memorizingTime();
-    setTimeout(playingTime, (time + 2) * 1000);
+    setTimeout(playingTime, (time + 1.1) * 1000); // Bug Fix: Add 1.1 seconds for Safari & Firefox browsers
 });
 
 // Memorizing Time function
@@ -199,11 +199,11 @@ function memorizingTime() {
 // Times are lower than what the actual game will be for testing purposes
 function calculateMemorizingTime() {
     if (easyGame) {
-        return 3;
+        return 10;
     } else if (mediumGame) {
-        return 4;
+        return 20;
     } else if (hardGame) {
-        return 5;
+        return 30;
     }
 }
 
@@ -211,11 +211,11 @@ function calculateMemorizingTime() {
 // Timers are lower than what the actual game will be for testing purposes
 function calculatePlayingTime() {
     if (easyGame) {
-        return 5;
+        return 20;
     } else if (mediumGame) {
-        return 6;
+        return 40;
     } else if (hardGame) {
-        return 7;
+        return 60;
     }
 }
 
