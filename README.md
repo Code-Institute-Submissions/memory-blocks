@@ -41,6 +41,8 @@ Player goals
     instructions on how to play the game and an option to contact the developer. The game page contains large and colourful buttons and icons to 
     return to the home page.
 
+![Image](assets/images/mockup.png)
+
 ## User Experience (UX) 
 
 - ### User Stories
