@@ -16,11 +16,11 @@
     --blue: #29ABE9;
     --bg-gradient: linear-gradient(
         45deg, 
-        var(--red), 
-        var(--orange),
-        var(--yellow), 
-        var(--green), 
-        var(--blue));
+        #D9140C, 
+        #FC8821,
+        #FAD500, 
+        #88C742, 
+        #29ABE9);
 }
 
 .red {
@@ -71,18 +71,10 @@ body {
    (https://www.youtube.com/watch?v=f3mwKLXpOLk&t=670s&ab_channel=KevinPowell)
 */
 .title {
-    font-size: 2rem;
+    font-size: 3rem;
     text-transform: uppercase;
     font-weight: bold;
-    background-image: var(--bg-gradient);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    background-size: 400%;
-    -webkit-animation: bg-animation 10s infinite alternate;
-            animation: bg-animation 10s infinite alternate;
 }
-
 
 @-webkit-keyframes bg-animation {
     0% {
@@ -326,6 +318,14 @@ footer {
 
 .red-text {
     color: var(--red);
+}
+
+.yellow-text {
+    color: var(--yellow);
+}
+
+.blue-text {
+    color: var(--blue);
 }
 
 /***** MEDIA QUERIES *****/
