@@ -19,7 +19,11 @@
 
 - game.html
 
-    - No errors or warnings were found. 
+    - No errors or warnings were found.
+
+#### W3C CSS Validator results 
+
+    - The CSS passed with no errors.
 
 #### JSHint Validation results
 
