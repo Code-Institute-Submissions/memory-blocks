@@ -133,6 +133,20 @@ Player goals
             | Grid Size      	| 3 x 3 	| 4 x 4  	| 5 x 5 	|
             | No. of squares 	| 9     	| 16     	| 25    	|
 
+    - Game Time - Memorizing Time
+
+        ![Image](assets/images/memorizing.png)
+
+        - When the player clicks the play button this starts the memorizing time. The time given depends on the level chosen (see tabel below). The 
+        grid is filled with colours and a message is displayed below the grid telling the player to memorize the grid. A back arrow is provided to the 
+        left of the screen to redirect the player to the home screen. On mobile devices a home icon is used instead and is displayed at the bottom of the
+        page.
+
+            |                     	| Easy 	| Medium 	| Hard 	|
+            |---------------------	|------	|--------	|------	|
+            | Memorizing time (s) 	| 10   	| 20     	| 30   	|
+    
+    
 - ### Design
 
   - #### Colour Scheme
