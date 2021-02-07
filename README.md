@@ -146,7 +146,18 @@ Player goals
             |---------------------	|------	|--------	|------	|
             | Memorizing time (s) 	| 10   	| 20     	| 30   	|
     
-    
+    - Game Time - Playing Time
+
+        ![Image](assets/images/playing.png)
+
+        - When the timer for the memorizing time reaches zero the playing time begins. The timer resets and displays a new value (see table below). The 
+        grid turn grey and a selection of colours appears above the grid. The player clicks on a colour to choose it. A thick black border appears around
+        the colour to let the player know it has been clicked. They can then click on the grid to fill it with that colour. The game finishes when the 
+        timer reaches zero or the player clicks the finish button.
+
+            |                     	| Easy 	| Medium 	| Hard 	|
+            |---------------------	|------	|--------	|------	|
+            | Playing time (s) 	    | 20   	| 40     	| 60   	|
 - ### Design
 
   - #### Colour Scheme
