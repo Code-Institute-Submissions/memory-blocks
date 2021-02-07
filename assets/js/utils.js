@@ -6,23 +6,26 @@
 */
 // Wrap every letter in a span
 
-let textWrapper = document.querySelector('.ml9 .letters');
-textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+if (!(/iPhone|iPad|iPod|Android|webOS|BlackBerry|Opera Mini|IEMobile/i.test(navigator.userAgent))) {
 
-anime.timeline()
-    .add({
-        targets: '.ml9 .letter',
-        scale: [0, 1],
-        duration: 1500,
-        elasticity: 600,
-        delay: (el, i) => 45 * (i + 1)
-    }).add({
-        targets: '.ml9',
-        // opacity: 0,
-        duration: 1000,
-        easing: "easeOutExpo",
-        delay: 1000
-    });
+    let textWrapper = document.querySelector('.ml9 .letters');
+    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+    anime.timeline()
+        .add({
+            targets: '.ml9 .letter',
+            scale: [0, 1],
+            duration: 1500,
+            elasticity: 600,
+            delay: (el, i) => 45 * (i + 1)
+        }).add({
+            targets: '.ml9',
+            // opacity: 0,
+            duration: 1000,
+            easing: "easeOutExpo",
+            delay: 1000
+        });
+}
 
 function sendMail(contactForm) {
     emailjs.send("service_ra2u0qi", "john_morgan", {
