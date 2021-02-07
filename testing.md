@@ -150,3 +150,22 @@
         <br>
         <img src="assets/images/testing_images/instructions.png" alt="Screenshot: instructions">
         </div>
+
+### Manual Testing on Live Site
+
+- Home page
+
+  1. Hovered over the icons to verify the hover colour change worked as expected.
+  2. Clicked on the question mark icon to verify it opened the instructions modal.
+  3. Hovered over the close button in the instructions modal to verify the hover colour change worked as expected.
+  4. Clicked on the close button in the instructions modal to verify it closed.
+  5. Clicked outside of the instructions modal to verify it closed.
+  6. Clicked on the email icon to verify it opened the contact form modal.
+  7. Hovered over the close button in the contact form modal to verify the hover colour change worked as expected.
+  8. Clicked on the close button in the contact form modal to verify it closed.
+  9. Clicked outside of the contact form modal to verify it closed.
+  10. Tried to submit the form with empty fields to verify a warning message appeared.
+  11. Tried to submit the form with an invalid email address to verify a warning message appeared.
+  12. Submitted the form to verify that a message sent successfully appeared on the homepage.
+  13. Clicked on the play button to verify it redirected to the game page.
+
