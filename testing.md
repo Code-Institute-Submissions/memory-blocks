@@ -169,7 +169,7 @@
   12. Submitted the form to verify that a message sent successfully appeared on the homepage.
   13. Clicked on the play button to verify it redirected to the game page.
 
-- Game page - pre-game
+- Game page - pre-game stage
 
   1. Hovered over the easy, medium and hard buttons to verify the hover colour change worked as expected.
   2. Hovered over the back arrow to verify the hover colour change worked as expected.
@@ -181,7 +181,7 @@
   8. Verified that the play button appeared when each of the buttons was clicked.
   9. Hovered over the play button to verify the hover colour change worked as expected.
 
-- Game page - memorizing time - easy game
+- Game page - memorizing time stage - easy game
 
   1. Clicked the play button with easy game chosen to verify that the grid was filled with random colours.
   2. Verified that the play button and level buttons were hidden.
@@ -193,3 +193,10 @@
   8. Verified that each square of the grid turned grey when the timer reached zero.
   9. Verified the colour picker appeared above the grid when the timer reached zero.
 
+- Game page - playing time stage- easy game
+
+  1. Clicked on each of the colours of the colour picker to verify the border thickness of the clicked colour increased.
+  2. Clicked on a square of the grid to verify its colour changed to that chosen in the colour picker.
+  3. Repeated the above step for each of the colours.
+  4. Verified that the timer started at 20 seconds and counted doewn to zero.
+  5. Verified that when the timer reached 5 second the message displayed changed to "Hurry!".
