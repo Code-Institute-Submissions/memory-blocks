@@ -191,7 +191,7 @@ Player goals
 
 ### Future Features
  
-The following are elements that could be added to the gamne in future development
+The following are elements that could be added to the game in future development
 
 - The player receives bounus points for finishing the game before the timer runs out.
 
@@ -257,6 +257,39 @@ For example no more than three of one colour could appear in the easy grid.
 ## Testing
 
 The testing data for this project can be found in a separate file called [testing.md](https://github.com/Johnny-Morgan/memory-blocks/blob/master/testing.md).
+
+## Deployment
+
+### Deploying to GitHub Pages
+
+This project was deployed to GitHub Pages using the following process:
+
+1. Log in to GitHub and locate the projects [repository](https://github.com/Johnny-Morgan/memory-blocks/).
+2. From the menu locate and click Settings.
+3. Scroll down to the GitHub Pages section.
+4. Click on the drop-down menu under Source and select Master Branch.
+5. Click the Save button.
+6. The site is now published and the [link](https://johnny-morgan.github.io/memory-blocks/) is provided.
+
+### Forking the GitHub Repository
+
+Forking a repository allows you to freely experiment with changes without affecting the original project.
+This project can be forked using the following process:
+
+1. Log in to GitHub and locate the projects [repository](https://github.com/Johnny-Morgan/memory-blocks/).
+2. At the top right-hand side of the page locate and click on the Fork button.
+3. Further information can be found [here](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo).
+
+### Cloning the GitHub Repository
+
+1. Log in to GitHub and locate the projects [repository](https://github.com/Johnny-Morgan/memory-blocks/).
+2. Click on the Code button which is located above the list of project files.
+3. Copy the URL link located under the HTTPS tab.
+4. Open a terminal in your IDE.
+5. Change the current working directory to the location where you want the cloned directory.
+6. Type `git clone`, and paste the URL you copied in Step 3.
+7. Press Enter to create your local clone.
+8. Further information can be found [here](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository).
 
 ## Credits
 
