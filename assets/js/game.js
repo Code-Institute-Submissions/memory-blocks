@@ -47,7 +47,7 @@ let highScore = localStorage.getItem("highScore");
 if (highScore !== null) {
     $("#high-score").html(highScore);
 } else {
-    highScore = 0;
+    $("#high-score").html("0");
 }
 
 // Hide the colour picker until the playing time starts
