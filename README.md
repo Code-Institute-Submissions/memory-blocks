@@ -79,6 +79,15 @@ Player goals
 
   - [Contact Form Modal](https://github.com/Johnny-Morgan/memory-blocks/blob/master/assets/docs/wireframes_contact_form_modal.pdf).
 
+  Deviations from the wireframes
+
+  - On the game page, it was decided to move the colour picker to above the grid and keep all the game elements centered on the page.
+
+  - A back button was added to the game page to redirect the player back to the home page. On mobile devices a home icon was added for 
+  the same function.
+
+  - A cancel button was added to the contact form modal.
+
 - ### Design
 
   - #### Colour Scheme
@@ -165,7 +174,7 @@ Player goals
         ![Image](assets/images/playing.png)
 
         - When the timer for the memorizing time reaches zero the playing time begins. The timer resets and displays a new value (see table below). The 
-        grid turn grey and a selection of colours appears above the grid. The player clicks on a colour to choose it. A thick black border appears around
+        grid turns grey and a selection of colours appears above the grid. The player clicks on a colour to choose it. A thick black border appears around
         the colour to let the player know it has been clicked. They can then click on the grid to fill it with that colour. The game finishes when the 
         timer reaches zero or the player clicks the finish button.
 
@@ -193,9 +202,9 @@ Player goals
  
 The following are elements that could be added to the game in future development
 
-- The player receives bounus points for finishing the game before the timer runs out.
+- The player receives bonus points for finishing the game before the timer runs out.
 
-- The player receives bouns points for getting every sqaure of the grid correct.
+- The player receives bonus points for getting every sqaure of the grid correct.
 
 - Audio to play when buttons are clicked.
 
