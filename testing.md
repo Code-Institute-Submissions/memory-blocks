@@ -2,6 +2,12 @@
 
 ### Testing Overview
 
+- The website was tested on Google Chrome, Mozilla Firefox, Opera, Safari and Microsoft Edge browsers.
+
+- Using Chrome developer tools the responsive nature of the site was tested on the Moto G4, Galaxy S5, iPhone5/SE, iPhone 6/7/8, iPad and Surface Duo.
+
+- The website was tested on real-life devices, namely a 14" Windows laptop, an Alcatel 1 Android Phone and an iPhone SE.
+
 ### Validation
 
 - The [W3C Markup Validator](https://validator.w3.org/#validate_by_input) service was used to validate the HTML code of the project.
@@ -23,7 +29,7 @@
 
 #### W3C CSS Validator results 
 
-    - The CSS passed with no errors.
+- The CSS passed with no errors.
 
 #### JSHint Validation results
 
