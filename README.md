@@ -1,5 +1,5 @@
 <div align="center">
-    <a href="https://johnny-morgan.github.io/memory-blocks/" target="_blank"><img src="assets/images/screnshot_home.PNG" alt="memory blocks logo"></a>
+    <a href="https://johnny-morgan.github.io/memory-blocks/" target="_blank"><img src="assets/images/screenshot_home.png" alt="memory blocks logo"></a>
     <h2>
         Memory Blocks is an entertaining and challenging memory game that is suitable for all ages, 
         it can be played by anyone that can use a phone or any personal computing device!
@@ -201,7 +201,7 @@ The following are elements that could be added to the gamne in future developmen
 
 - An option for a player to input their name.
 
-- A button to exit memorizing time component of the game before the timer runs out.
+- A button to exit the memorizing time component of the game before the timer runs out.
 
 - A settings section where the player could for example change the timings, reset their highscore, change the colour pallette.
 
