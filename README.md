@@ -158,6 +158,24 @@ Player goals
             |                     	| Easy 	| Medium 	| Hard 	|
             |---------------------	|------	|--------	|------	|
             | Playing time (s) 	    | 20   	| 40     	| 60   	|
+
+
+    - Finished Game
+
+        ![Image](assets/images/finished_game.png)
+
+        - When the timer for the playing time reaches zero the game finishes. An "X" appears on each square of the grid that was guessed incorrectly
+        or left blank. Two buttons appear one which displays the correct solution and one that resets the game so the player can play a new game. The 
+        button that displays the correct solution will not appear if the player filled in the entire grid correctly. 
+
+        - A score is calculated for the player and displayed below the grid. The player earns points based on the table below. The player is also told 
+        how many squares they filled in correct. If they beat their high score a congratulations message is displayed and the high score is updated. 
+
+            |                     	| Easy 	| Medium 	| Hard 	|
+            |---------------------	|------	|--------	|------	|
+            | Points per square	    | 10   	| 20     	| 30   	|
+
+    
 - ### Design
 
   - #### Colour Scheme
