@@ -169,3 +169,27 @@
   12. Submitted the form to verify that a message sent successfully appeared on the homepage.
   13. Clicked on the play button to verify it redirected to the game page.
 
+- Game page - pre-game
+
+  1. Hovered over the easy, medium and hard buttons to verify the hover colour change worked as expected.
+  2. Hovered over the back arrow to verify the hover colour change worked as expected.
+  3. Clicked the back arrow button to verify it redirected to the home page.
+  4. Clicked the easy button to verify the grid changed to a 3 x 3 grid.
+  5. Clicked the medium button to verify the grid changed to a 4 x 4 grid.
+  6. Clicked the hard button to verify the grid changed to a 5 x 5 grid.
+  7. Verified that the message displayed below the buttons changed for the appropriate button.
+  8. Verified that the play button appeared when each of the buttons was clicked.
+  9. Hovered over the play button to verify the hover colour change worked as expected.
+
+- Game page - memorizing time - easy game
+
+  1. Clicked the play button with easy game chosen to verify that the grid was filled with random colours.
+  2. Verified that the play button and level buttons were hidden.
+  3. Verifired that the message "Memorize the grid..." displayed below the grid.
+  4. Verified that the timer started at ten seconds and counted down to zero.
+  5. Verified that the timer displayed "Go!" when it reached zero.
+  6. Verified that the message "Fill in the grid" displayed when the timer reached zero.
+  7. Verified that the Finish button displayed when the timer reached zero.
+  8. Verified that each square of the grid turned grey when the timer reached zero.
+  9. Verified the colour picker appeared above the grid when the timer reached zero.
+
