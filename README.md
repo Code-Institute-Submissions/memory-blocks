@@ -79,6 +79,20 @@ Player goals
 
   - [Contact Form Modal](https://github.com/Johnny-Morgan/memory-blocks/blob/master/assets/docs/wireframes_contact_form_modal.pdf).
 
+- ### Design
+
+  - #### Colour Scheme
+
+    I used a "Stimulate The Brain" colour scheme for this project which I obtained from [schemecolor](https://www.schemecolor.com/stimulate-the-brain.php).
+    This palette has 5 colors which are Button Blue (#29ABE9), Yellow-Green (#88C742), Cyber Yellow (#FAD500), Princeton Orange (#FC8821) and Venetian Red (#D9140C).
+    
+    ![Image](assets/images/palette.png)
+
+  - #### Typography
+
+    [Salsa](https://fonts.google.com/specimen/Salsa?query=salsa&preview.text_type=custom#standard-styles) was chosen as the main font for this website with cursive as the fallback font.
+    Salsa is a fun and elegant font which is appealing to both children and adults.
+
 ## Features
 
 ### Existing Features
@@ -112,17 +126,17 @@ Player goals
 
         ![Image](assets/images/gamepage.png)
 
-    1. Highscore
+     1. Highscore
 
         - A highscore is displayed at the top of the screen. The highscore is set to zero if the game has not been played before. When a player sets a 
         new highscore, their highscore is saved in local storage and displayed every time they play the game on the same device.
     
-    2. The game grid
+     2. The game grid
 
         - The game grid is displayed below the highscore. The size of the grid varies depending on the level chosen. Currently the grid is set to the hard
         level when the page loads. 
 
-    3. Level buttons
+     3. Level buttons
 
         - The player has a choice of three levels, easy medium and hard. Each button is clearly labeled with a different colour for each level. A message
         below the buttons prompts the player to choose a level. By clicking on a button the size of the grid changes according to the table below. A play button
@@ -175,20 +189,26 @@ Player goals
             |---------------------	|------	|--------	|------	|
             | Points per square	    | 10   	| 20     	| 30   	|
 
-    
-- ### Design
+### Future Features
+ 
+The following are elements that could be added to the gamne in future development
 
-  - #### Colour Scheme
+- The player receives bounus points for finishing the game before the timer runs out.
 
-    I used a "Stimulate The Brain" colour scheme for this project which I obtained from [schemecolor](https://www.schemecolor.com/stimulate-the-brain.php).
-    This palette has 5 colors which are Button Blue (#29ABE9), Yellow-Green (#88C742), Cyber Yellow (#FAD500), Princeton Orange (#FC8821) and Venetian Red (#D9140C).
-    
-    ![Image](assets/images/palette.png)
+- The player receives bouns points for getting every sqaure of the grid correct.
 
-  - #### Typography
+- Audio to play when buttons are clicked.
 
-    [Salsa](https://fonts.google.com/specimen/Salsa?query=salsa&preview.text_type=custom#standard-styles) was chosen as the main font for this website with cursive as the fallback font.
-    Salsa is a fun and elegant font which is appealing to both children and adults.
+- An option for a player to input their name.
+
+- A button to exit memorizing time component of the game before the timer runs out.
+
+- A settings section where the player could for example change the timings, reset their highscore, change the colour pallette.
+
+- Instead of colours the player could switch the squares to pictures.
+
+- A function could be added to the JavaScript file to limit the number of an individual colour being generated for a grid. 
+For example no more than three of one colour could appear in the easy grid.
 
 ## Technologies Used
 
