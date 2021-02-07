@@ -185,7 +185,7 @@
 
   1. Clicked the play button with easy game chosen to verify that the grid was filled with random colours.
   2. Verified that the play button and level buttons were hidden.
-  3. Verifired that the message "Memorize the grid..." displayed below the grid.
+  3. Verified that the message "Memorize the grid..." displayed below the grid.
   4. Verified that the timer started at ten seconds and counted down to zero.
   5. Verified that the timer displayed "Go!" when it reached zero.
   6. Verified that the message "Fill in the grid" displayed when the timer reached zero.
@@ -200,3 +200,27 @@
   3. Repeated the above step for each of the colours.
   4. Verified that the timer started at 20 seconds and counted doewn to zero.
   5. Verified that when the timer reached 5 second the message displayed changed to "Hurry!".
+
+- Game page - finished game time stage - easy game
+  1. When the timer reached zero the following were verified:
+        1. The colour picker was hidden.
+        2. An "X" appeared on each square of the grid that was filled in incorrect.
+        3. The opacity of the incorrect squares was reduced.
+        4. The show solution and play again buttons were displayed.
+        5. The message "Game Over!" was displayed.
+        6. A message displaying the amount of correct answers was displayed.
+        7. A message with the players score was displayed.
+
+  2. Clicked on the show solution button to verify that the colours of the grid changed to the correct colours.
+  3. Clicked on the play again button to verify the the game reset to the pre-game stage.
+
+  All of the above tests were repeated under medium and hard game conditions with no errors found. The game plays the same for each level 
+  of difficulty with just changes in the times and points as shown in the table below. 
+
+    |                     	| Easy  	| Medium 	| Hard  	|
+    |---------------------	|-------	|--------	|-------	|
+    | Grid Size           	| 3 x 3 	| 4 x 4  	| 5 x 5 	|
+    | Memorizing Time (s) 	| 10    	| 20     	| 30    	|
+    | Playing Time (s)    	| 20    	| 40     	| 60    	|
+    | Points per square     | 10    	| 20     	| 30    	|
+    
