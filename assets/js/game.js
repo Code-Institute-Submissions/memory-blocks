@@ -43,8 +43,11 @@ let time, timer;
 // Scoring system variables
 let score, points, correctGuesses;
 let highScore = localStorage.getItem("highScore");
+
 if (highScore !== null) {
     $("#high-score").html(highScore);
+} else {
+    highScore = 0;
 }
 
 // Hide the colour picker until the playing time starts
@@ -280,7 +283,6 @@ function calculateScore() {
             correctGuesses++;
         }
     }
-
     // Check for amount of correct guesses
     if (correctGuesses !== gridSize) {
         // Do not display "Show Solution" button if player got all guesses correct
