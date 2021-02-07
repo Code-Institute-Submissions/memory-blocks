@@ -254,6 +254,10 @@ For example no more than three of one colour could appear in the easy grid.
 
   - Font Awesome is used to obtain the icons used in this website.
 
+- [Autoprefixer](https://autoprefixer.github.io/)
+
+  - Autoprefixer was used to add vendor prefixes.
+
 ## Testing
 
 The testing data for this project can be found in a separate file called [testing.md](https://github.com/Johnny-Morgan/memory-blocks/blob/master/testing.md).
