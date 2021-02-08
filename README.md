@@ -17,7 +17,7 @@ Business Goals
 
     - Memory Blocks challenges the player to remember a grid made up of between 9 and 25 squares depending on the level of difficulty. 
     Each square has a colour that the player must remember under a certain time limit. They must then reproduce the grid from memory before a 
-    second timer reaches zero. Remembering a large amount under a time constraint is an exceptionaly challenging task.
+    second timer reaches zero. Remembering a large amount under a time constraint is an exceptionally challenging task.
 
   - Provide a cognitively stimulating experience
 
@@ -39,7 +39,7 @@ Player goals
 
     - The website consists of two pages, the home page and the game page. Large icons on the home page can be clicked that provide players with 
     instructions on how to play the game and an option to contact the developer. The game page contains large and colourful buttons and icons to 
-    return to the home page.
+    return the player to the home page.
 
 ![Image](assets/images/mockup.png)
 
@@ -81,9 +81,9 @@ Player goals
 
   Deviations from the wireframes
 
-  - On the game page, it was decided to move the colour picker to above the grid and keep all the game elements centered on the page.
+  - On the game page, it was decided to move the colour picker to above the grid and keep all the game elements centred on the page.
 
-  - A back button was added to the game page to redirect the player back to the home page. On mobile devices a home icon was added for 
+  - A back button was added to the game page to redirect the player back to the home page. On mobile devices, a home icon was added for 
   the same function.
 
   - A cancel button was added to the contact form modal.
@@ -93,7 +93,7 @@ Player goals
   - #### Colour Scheme
 
     I used a "Stimulate The Brain" colour scheme for this project which I obtained from [schemecolor](https://www.schemecolor.com/stimulate-the-brain.php).
-    This palette has 5 colors which are Button Blue (#29ABE9), Yellow-Green (#88C742), Cyber Yellow (#FAD500), Princeton Orange (#FC8821) and Venetian Red (#D9140C).
+    This palette has 5 colours which are Button Blue (#29ABE9), Yellow-Green (#88C742), Cyber Yellow (#FAD500), Princeton Orange (#FC8821) and Venetian Red (#D9140C).
     
     ![Image](assets/images/palette.png)
 
@@ -142,13 +142,13 @@ Player goals
     
      2. The game grid
 
-        - The game grid is displayed below the highscore. The size of the grid varies depending on the level chosen. Currently the grid is set to the hard
+        - The game grid is displayed below the highscore. The size of the grid varies depending on the level chosen. Currently, the grid is set to the hard
         level when the page loads. 
 
      3. Level buttons
 
-        - The player has a choice of three levels, easy medium and hard. Each button is clearly labeled with a different colour for each level. A message
-        below the buttons prompts the player to choose a level. By clicking on a button the size of the grid changes according to the table below. A play button
+        - The player has a choice of three levels, easy medium and hard. Each button is clearly labelled with a different colour for each level. A message 
+        below the buttons prompts the player to choose a level. By clicking on a button the size of the grid changes according to the table below. A play button 
         is then displayed which starts the game when clicked.
 
             |                	| Easy  	| Medium 	| Hard  	|
@@ -160,9 +160,9 @@ Player goals
 
         ![Image](assets/images/memorizing.png)
 
-        - When the player clicks the play button this starts the memorizing time. The time given depends on the level chosen (see tabel below). The 
+        - When the player clicks the play button this starts the memorizing time. The time given depends on the level chosen (see table below). The 
         grid is filled with colours and a message is displayed below the grid telling the player to memorize the grid. A back arrow is provided to the 
-        left of the screen to redirect the player to the home screen. On mobile devices a home icon is used instead and is displayed at the bottom of the
+        left of the screen to redirect the player to the home screen. On mobile devices, a home icon is used instead and is displayed at the bottom of the 
         page.
 
             |                     	| Easy 	| Medium 	| Hard 	|
@@ -192,7 +192,7 @@ Player goals
         button that displays the correct solution will not appear if the player filled in the entire grid correctly. 
 
         - A score is calculated for the player and displayed below the grid. The player earns points based on the table below. The player is also told 
-        how many squares they filled in correct. If they beat their high score a congratulations message is displayed and the high score is updated. 
+        how many squares they filled in accurately. If they beat their high score a congratulations message is displayed and the high score is updated. 
 
             |                     	| Easy 	| Medium 	| Hard 	|
             |---------------------	|------	|--------	|------	|
@@ -200,11 +200,11 @@ Player goals
 
 ### Future Features
  
-The following are elements that could be added to the game in future development
+The following are elements that could be added to the game in future development:
 
 - The player receives bonus points for finishing the game before the timer runs out.
 
-- The player receives bonus points for getting every sqaure of the grid correct.
+- The player receives bonus points for getting every square of the grid correct.
 
 - Audio to play when buttons are clicked.
 
@@ -212,12 +212,12 @@ The following are elements that could be added to the game in future development
 
 - A button to exit the memorizing time component of the game before the timer runs out.
 
-- A settings section where the player could for example change the timings, reset their highscore, change the colour pallette.
+- A settings section where the player could, for example, change the timings, reset their highscore, change the colour palette.
 
 - Instead of colours the player could switch the squares to pictures.
 
 - A function could be added to the JavaScript file to limit the number of an individual colour being generated for a grid. 
-For example no more than three of one colour could appear in the easy grid.
+For example, no more than three of one colour could appear in the easy grid.
 
 ## Technologies Used
 
@@ -269,7 +269,7 @@ For example no more than three of one colour could appear in the easy grid.
 
 - [Jasmine](https://jasmine.github.io/index.html)
 
-  - Jasmine was used to test this projects JavaScript functions.
+  - Jasmine was used to test this project's JavaScript functions.
 
 ## Testing
 
@@ -311,8 +311,6 @@ This project can be forked using the following process:
 ## Credits
 
 ### Code
-
-- The title h1 style and animation was taken from [Kevin Powell's](https://www.youtube.com/watch?v=f3mwKLXpOLk&t=670s&ab_channel=KevinPowell) YouTube channel and edited.
 
 - The JavaScript for the animated text was take from [tobiasahlin.com](https://tobiasahlin.com/moving-letters/#9).
 
