@@ -7,6 +7,25 @@
     <h3><a href="https://johnny-morgan.github.io/memory-blocks/" target="_blank">Click here</a> to view the site on GitHub pages.</h3>
 </div>
 
+1. [**Overview**](#overview)
+2. [**User Experience (UX)**](#user-experience-(ux))
+    - [**User Stories**](#user-stories)
+    - [**Wireframes**](#wireframes)
+    - [**Design**](#design)
+3. [**Features**](#features)
+    - [**Existing Features**](#existing-features)
+    - [**Homepage Features**](#homepage-features)
+    - [**Gamepage Features**](#gamepage-features)
+    - [**Future Features**](#future-features)
+4. [**Technologies Used**](#technologies-used)
+5. [**Testing**](#testing)
+6. [**Deployment**](#deployment)
+    - [**Deploying to GitHub Pages**](#deploying-to-github-pages)
+    - [**Forking the GitHub Repository**](#forking-the-github-repository)
+    - [**Cloning the GitHub Repository**](#cloning-the-github-repository)
+7. [**Credits**](#credits)
+8. [**Acknowledgements**](#acknowledgements)
+
 ## Overview
 
 The fundamental objective of this website is to provide an engaging and stimulating memory game that is suitable for everyone.
