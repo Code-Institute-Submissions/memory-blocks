@@ -61,7 +61,7 @@
     2. A game that that has different levels of difficulty, so I can continue to challenge myself as my memory skills improve.
 
         - The game has three levels of difficulty, easy, medium and hard. Each jump in level significantly increases the difficulty of the game. 
-        Moving from the easy level to medium level results in the amount of coloured squares that need to be remembered increasing from 9 to 16, 
+        Moving from the easy level to medium level results in the number of coloured squares that need to be remembered increasing from 9 to 16, 
         an increase in 78%. The jump to the hard level increases the cells to 25 which is a 56% increase on the medium level and motivates the player 
         to work harder on their memory skills.
 
@@ -75,7 +75,7 @@
     3. To be able to keep track of my high score, so I can challenge myself to beat it.
 
         - At the end of every game, the player's score is calculated and compared to the current highscore. If they beat the highscore a message is 
-        dislpayed congratulating them on achieving a new highscore. Their highscore is displayed at the top of the game page and is stored in the 
+        displayed congratulating them on achieving a new highscore. Their highscore is displayed at the top of the game page and is stored in the 
         local storage on their device. Therefore when they return to the website at a later date their highscore is still available and 
         displayed for them.
         
@@ -108,14 +108,14 @@
 
         - The controls are easy to understand and implement. A series of click events are all that is required to play the game. The player simply clicks on the 
         relevant button to choose a level and clicks on the start button to play. To choose a colour they simply click on one of the coloured squares above the game grid. 
-        The grid is filled in by clicking on the each square of the grid. The game is ended by clicking on the finish button or by letting the timer run down. A 
+        The grid is filled in by clicking on each square of the grid. The game is ended by clicking on the finish button or by letting the timer run down. A 
         show solution button can then be clicked to show the correct solution. They can then click the play again button to start a new game. There is no typing 
         needed during the game so the use of a keyboard is not required. 
 
     3. A game that is fun and exciting to play, so I can share and play with my family and friends.
 
-        - At the end of each game the player receives a score for their effort. They can then compete with family members and friends to try and beat each others
-        scores. A sense of competition brings entertaininment and it motivates players to outperform others and allows them to assess their performance against the
+        - At the end of each game the player receives a score for their effort. They can then compete with family members and friends to try and beat each other's
+        scores. A sense of competition brings entertainment and it motivates players to outperform others and allows them to assess their performance against the
         performance of others. The vibrant colour scheme of the website adds energy and the countdown timer adds tension to the game as the counter approaches zero.
          
         <div align="center">
@@ -127,7 +127,7 @@
 
     1. A game I can play with my children/grandchildren, so I can spend more time having fun with them.
 
-        - Memory Blocks is suitable for all ages. By challenging each other to beat their scores, Memory Blocks allows parent/granparents to spend more fun time with 
+        - Memory Blocks is suitable for all ages. By challenging each other to beat their scores, Memory Blocks allows parent/grandparents to spend more fun time with 
         their children/grandchildren, all while developing and improving their memory skills.
 
     2. The ability to contact the developer of the game, so I can report any bugs or offer suggestions.
@@ -198,8 +198,8 @@
   1. Clicked on each of the colours of the colour picker to verify the border thickness of the clicked colour increased.
   2. Clicked on a square of the grid to verify its colour changed to that chosen in the colour picker.
   3. Repeated the above step for each of the colours.
-  4. Verified that the timer started at 20 seconds and counted doewn to zero.
-  5. Verified that when the timer reached 5 second the message displayed changed to "Hurry!".
+  4. Verified that the timer started at 20 seconds and counted down to zero.
+  5. Verified that when the timer reached 5 seconds the message displayed changed to "Hurry!".
 
 - Game page - finished game time stage - easy game
   1. When the timer reached zero the following were verified:
@@ -208,14 +208,14 @@
         3. The opacity of the incorrect squares was reduced.
         4. The show solution and play again buttons were displayed.
         5. The message "Game Over!" was displayed.
-        6. A message displaying the amount of correct answers was displayed.
-        7. A message with the players score was displayed.
+        6. A message displaying the number of correct answers was displayed.
+        7. A message with the player's score was displayed.
         8. A congratulations message was displayed below the grid when the highscore was beaten.
         9. The highscore at the top of the page updated when the highscore was beaten. 
         10. Verified that the highscore had the same value when the browser was closed and reopened.
 
   2. Clicked on the show solution button to verify that the colours of the grid changed to the correct colours.
-  3. Clicked on the play again button to verify the the game reset to the pre-game stage.
+  3. Clicked on the play again button to verify the game reset to the pre-game stage.
 
   All of the above tests were repeated under medium and hard game conditions with no errors found. The game plays the same for each level 
   of difficulty with just changes in the times and points as shown in the table below. 
@@ -268,7 +268,7 @@ in your browser.
 
 ### Bugs
 
- - On small devices the words in the text for the tagline were breaking and wrapping on to the next line. This was due to an issue with the JavaScript 
+ - On small devices, the words in the text for the tagline were breaking and wrapping on to the next line. This was due to an issue with the JavaScript 
 code for the animation of the text. 
 
     ![Image](assets/images/testing_images/bug_smartphone.png)
@@ -294,7 +294,7 @@ code for the animation of the text.
             .find("#message").val("").end();
     });
     ```
-- When a game was being played for the first time, the highscore value was empty instead of diplaying "0". The code was setting the 
+- When a game was being played for the first time, the highscore value was empty instead of displaying "0". The code was setting the 
 variable highScore to 0 but the text value for the highscore div was not being updated. 
 
     Fix: added the following code when the highScore variable was being checked:
@@ -319,8 +319,8 @@ This was because the highscore variable was not being updated when it was beaten
     ```
 - The game grid could be changed during a game.
 
-    Fix: the div that the game level buttons are in was given a class of "game-level" and the "hidden" class was added to the div when the 
-    play button was clicked. The "hidden" class gives the css property "display" a value of "none".
+    Fix: hide the level selection buttons when the game starts. The div that contains the game level buttons was given a class of "game-level" and 
+    the "hidden" class was added to the div when the play button was clicked. The "hidden" class gives the CSS property "display" a value of "none".
 
     ```javascript
    $(".game-level").addClass("hidden");
@@ -329,13 +329,13 @@ This was because the highscore variable was not being updated when it was beaten
 - If the play button was clicked more than once during gameplay the memorizingTime function was called again. This caused the timeInterval 
 function to be called again, which lead to the memorizing timer to count down at a faster rate than normal.
 
-    Fix: hide the play button when it is clicked to prevent the player clicking it multiple times.
+    Fix: hide the play button when it is clicked to prevent the player from clicking it multiple times.
 
     ```javascript
    $("#play").addClass("hidden");
     ```
-- The memorizing time was not calculated correctly if the player clicked between levels before pressing the play button. For example 
-if the player chose the easy level the boolean easyGame was set to true. However if they then clicked on the medium level button, the mediumGame 
+- The memorizing time was not calculated correctly if the player clicked between levels before pressing the play button. For example, 
+if the player chose the easy level the boolean easyGame was set to true. However, if they then clicked on the medium level button, the mediumGame 
 boolean was set to true. But the easyGame boolean still had a value of true. Therefore when the calculateMemorizingTime function was called it would return the value for an easyGame, as the first if statement is a check for an easyGame.
 
     Fix: when the easy button is clicked set the easyGame boolean to true and set the mediumGame and hardGame booleans to false. 
@@ -351,7 +351,7 @@ boolean was set to true. But the easyGame boolean still had a value of true. The
 - When the game finished, the score variable was always calculated as the highest score achievable. This was because the showWrongGuesses function 
 was being called before calculateScore function. Calling the showWrongGuesses function first resulted in the playerColours array and the 
 copyOfGridColours array both being empty. Therefore when the score was calculated, each index of each array was compared and evaluated to be the 
-same (since they were both enmpty arrays). Hence the score and correctGuesses variables were incremented to the max score.
+same (since they were both empty arrays). Hence the score and correctGuesses variables were incremented to the max score.
 
-Fix: call the showWrongGuesses function after calculateScore function.
+    Fix: call the showWrongGuesses function after calculateScore function.
 
