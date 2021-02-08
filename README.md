@@ -315,3 +315,11 @@ This project can be forked using the following process:
 - The title h1 style and animation was taken from [Kevin Powell's](https://www.youtube.com/watch?v=f3mwKLXpOLk&t=670s&ab_channel=KevinPowell) YouTube channel and edited.
 
 - The JavaScript for the animated text was take from [tobiasahlin.com](https://tobiasahlin.com/moving-letters/#9).
+
+## Acknowledgements
+
+Thank you to my mentor Gerard McBride for his support and guidance during this project.
+
+Thank you to the Code Institute Slack community for their advice and tips.
+
+Thank you to the numerous family members and friends who tested the game.
