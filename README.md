@@ -7,8 +7,10 @@
     <h3><a href="https://johnny-morgan.github.io/memory-blocks/" target="_blank">Click here</a> to view the site on GitHub pages.</h3>
 </div>
 
+## Table of Contents
+
 1. [**Overview**](#overview)
-2. [**User Experience (UX)**](#user-experience--ux-)
+2. [**User Experience**](#user-experience)
     - [**User Stories**](#user-stories)
     - [**Wireframes**](#wireframes)
     - [**Design**](#design)
@@ -62,7 +64,7 @@ Player goals
 
 ![Image](assets/images/mockup.png)
 
-## User Experience (UX) 
+## User Experience
 
 - ### User Stories
 
@@ -348,3 +350,7 @@ Thank you to my mentor Gerard McBride for his support and guidance during this p
 Thank you to the Code Institute Slack community for their advice and tips.
 
 Thank you to the numerous family members and friends who tested the game.
+
+<div align="right">
+    <a href="#table-of-contents"> ⇧ Back To Top </a>
+</div>
