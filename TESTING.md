@@ -367,3 +367,24 @@ same (since they were both empty arrays). Hence the score and correctGuesses var
 
     Fix: call the showWrongGuesses function after calculateScore function.
 
+- The footer was displaying in the middle of the home page on mobile devices when they were rotated to landscape mode.
+
+    Fix: as the footer serves no purpose other than to show the developers name, it was decided to remove it on mobile devices. A responsive footer is a 
+    feature that can be added in the future development of the site.
+
+    ```
+        /***** HIDE FOOTER ON MOBILE DEVICES*/
+    @media (max-width: 823px) {
+        footer {
+            display: none;
+        }
+    }
+    ```
+    
+- On Safari and Firefox browsers, the playing timer was starting before the memorizing timer finished causing the timers to countdown faster. 
+
+    Fix: the number of milliseconds to wait before calling the playingTime function was increased. This bug was found late in testing and requires further investigation.
+
+    ```javascript
+   setTimeout(playingTime, (time + 1.1) * 1000); 
+    ```
