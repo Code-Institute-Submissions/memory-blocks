@@ -6,6 +6,8 @@
 */
 // Wrap every letter in a span
 
+/* Credit for checking if device being used is a mobile device - Stackoverflow user laaposto 
+https://stackoverflow.com/questions/21555856/how-can-i-stop-a-js-function-from-running-on-a-mobile-device */
 if (!(/iPhone|iPad|iPod|Android|webOS|BlackBerry|Opera Mini|IEMobile/i.test(navigator.userAgent))) {
 
     let textWrapper = document.querySelector('.ml9 .letters');
@@ -43,7 +45,8 @@ function sendMail(contactForm) {
     return false; // To block from loading a new page
 }
 
-// Clear contact form on send
+/* Clear contact form on send - credit - Stackoverflow user Malk 
+https://stackoverflow.com/questions/21151044/how-to-clear-all-input-fields-in-bootstrap-modal-when-clicking-data-dismiss-butt */
 $('#contact').on('hidden.bs.modal', function (e) {
     $(this)
         .find("#name").val("").end()
