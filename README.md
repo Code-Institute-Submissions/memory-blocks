@@ -298,7 +298,7 @@ For example, no more than three of one colour could appear in the easy grid.
 
 ## Testing
 
-The testing data for this project can be found in a separate file called [testing.md](https://github.com/Johnny-Morgan/memory-blocks/blob/master/testing.md).
+The testing data for this project can be found in a separate file called [TESTING.md](https://github.com/Johnny-Morgan/memory-blocks/blob/master/TESTING.md).
 
 ## Deployment
 

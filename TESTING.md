@@ -7,7 +7,7 @@
     - [**W3C Markup Validator results**](#w3c-markup-validator-results)
     - [**W3C CSS Validator results**](#w3c-css-validator-results)
     - [**JSHint Validation results**](#jshint-validation-results)
-3. [**Testing User Stories from User Experience (UX) Section**](#testing-user-stories-from-user-experience-(ux)-section)
+3. [**Testing User Stories from User Experience Section**](#testing-user-stories-from-user-experience-section)
 4. [**Manual Testing on Live Site**](#manual-testing-on-live-site)
 5. [**Jasmine Testing**](#jasmine-testing)
 6. [**Bugs Discovered**](#bugs-discovered)
@@ -58,7 +58,7 @@
     The sendMail variable was declared as unused. This function is called in the form element of the index.html file.
 
 
-## Testing User Stories from User Experience (UX) Section
+## Testing User Stories from User Experience Section
 
 - As a player, I want:
  
