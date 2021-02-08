@@ -24,23 +24,52 @@
 }
 
 .red {
-  background-color: var(--red);
+    background-color: var(--red);
 }
 
 .orange {
-  background-color: var(--orange);
+    background-color: var(--orange);
 }
 
 .yellow {
-  background-color: var(--yellow);
+    background-color: var(--yellow);
 }
 
 .green {
-  background-color: var(--green);
+    background-color: var(--green);
 }
 
 .blue {
-  background-color: var(--blue);
+    background-color: var(--blue);
+}
+
+/***** TEXT *****/
+.large-text {
+    font-size: 2rem;
+}
+
+.medium-text {
+    font-size: 1.2rem;
+}
+
+.green-text {
+    color: var(--green);
+}
+
+.orange-text {
+    color: var(--orange);
+}
+
+.red-text {
+    color: var(--red);
+}
+
+.yellow-text {
+    color: var(--yellow);
+}
+
+.blue-text {
+    color: var(--blue);
 }
 
 body {
@@ -99,7 +128,6 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    
 }
 
 .colour {
@@ -112,7 +140,7 @@ body {
 }
 
 .clicked-color {
-  border: 5px solid black;
+    border: 5px solid black;
 }
 
 /***** GAME GRID AREA *****/
@@ -121,41 +149,41 @@ body {
 }
 
 .row {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 .cell {
-  min-width: 80px;
-  max-width: 80px;
-  min-height: 80px;
-  max-height: 80px;
-  border: 1px solid black;
-  background-color: lightgrey;
+    min-width: 80px;
+    max-width: 80px;
+    min-height: 80px;
+    max-height: 80px;
+    border: 1px solid black;
+    background-color: lightgrey;
 }
 
 .add-X:before {
-  content: "X";
-  font-size: 2rem;
-  vertical-align: -75%;
-  padding: 2rem;
+    content: "X";
+    font-size: 2rem;
+    vertical-align: -75%;
+    padding: 2rem;
 }
 
 /***** BUTTONS *****/
 .button {
-  border-radius: 1rem;
-  cursor: pointer;
-  color: #e7e7e7;
-  font-size: 1.25rem;
-  padding: 1em 2em;
-  text-decoration: none;
-  margin: 0.75rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    color: #e7e7e7;
+    font-size: 1.25rem;
+    padding: 1em 2em;
+    text-decoration: none;
+    margin: 0.75rem;
 }
 
 .button:hover {
-  text-decoration: none;
-  color: lightgray;
+    text-decoration: none;
+    color: lightgray;
 }
 
 .button-dark-green {
@@ -195,42 +223,50 @@ body {
 }
 
 .button-dark-green:hover {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(15%, #2abf3e), to(#44c78a));
-  background: -o-linear-gradient(top, #2abf3e 15%, #44c78a 100%);
-  background: linear-gradient(to bottom, #2abf3e 15%, #44c78a 100%);
-  background-color: #2fbf2a;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(15%, #2abf3e), to(#44c78a));
+    background: -o-linear-gradient(top, #2abf3e 15%, #44c78a 100%);
+    background: linear-gradient(to bottom, #2abf3e 15%, #44c78a 100%);
+    background-color: #2fbf2a;
 }
 
 .button-green:hover {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(15%, #5cbf2a), to(#44c767));
-  background: -o-linear-gradient(top, #5cbf2a 15%, #44c767 100%);
-  background: linear-gradient(to bottom, #5cbf2a 15%, #44c767 100%);
-  background-color: #5cbf2a;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(15%, #5cbf2a), to(#44c767));
+    background: -o-linear-gradient(top, #5cbf2a 15%, #44c767 100%);
+    background: linear-gradient(to bottom, #5cbf2a 15%, #44c767 100%);
+    background-color: #5cbf2a;
 }
 
 .button-orange:hover {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(15%, #f27c37), to(#c6831f));
-  background: -o-linear-gradient(top, #f27c37 15%, #c6831f 100%);
-  background: linear-gradient(to bottom, #f27c37 15%, #c6831f 100%);
-  background-color: #f26337;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(15%, #f27c37), to(#c6831f));
+    background: -o-linear-gradient(top, #f27c37 15%, #c6831f 100%);
+    background: linear-gradient(to bottom, #f27c37 15%, #c6831f 100%);
+    background-color: #f26337;
 }
 
 .button-red:hover {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(15%, #f24437), to(#c62d1f));
-  background: -o-linear-gradient(top, #f24437 15%, #c62d1f 100%);
-  background: linear-gradient(to bottom, #f24437 15%, #c62d1f 100%);
-  background-color: #f24437;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(15%, #f24437), to(#c62d1f));
+    background: -o-linear-gradient(top, #f24437 15%, #c62d1f 100%);
+    background: linear-gradient(to bottom, #f24437 15%, #c62d1f 100%);
+    background-color: #f24437;
 }
 
 .button-small {
     padding: 0.75rem 1.5rem;
 }
 
-footer {
-   position:absolute;
-   bottom:0;
-   width:100%;
-   height:2rem;
+.back-button {
+    position: fixed;
+    top: 40%;
+}
+
+.hidden-button {
+    margin-top: 4rem;
+    font-size: 50%;
+}
+
+.high-score {
+    font-size: 2.5rem;
+    text-transform: uppercase;
 }
 
 /***** TEXT ANIMATION *****/
@@ -238,26 +274,26 @@ footer {
    (https://tobiasahlin.com/moving-letters/#9)
 */
 .ml9 {
-  position: relative;
-  font-weight: 200;
-  font-size: 2em;
+    position: relative;
+    font-weight: 200;
+    font-size: 2em;
 }
 
 .ml9 .text-wrapper {
-  position: relative;
-  display: inline-block;
-  padding-top: 0.2em;
-  padding-right: 0.05em;
-  padding-bottom: 0.1em;
-  overflow: hidden;
+    position: relative;
+    display: inline-block;
+    padding-top: 0.2em;
+    padding-right: 0.05em;
+    padding-bottom: 0.1em;
+    overflow: hidden;
 }
 
 .ml9 .letter {
-  -webkit-transform-origin: 50% 100%;
-      -ms-transform-origin: 50% 100%;
-          transform-origin: 50% 100%;
-  display: inline-block;
-  line-height: 1em;
+    -webkit-transform-origin: 50% 100%;
+        -ms-transform-origin: 50% 100%;
+            transform-origin: 50% 100%;
+    display: inline-block;
+    line-height: 1em;
 }
 
 /***** MESSAGE AREA *****/
@@ -270,41 +306,20 @@ footer {
 }
 
 .timer {
-     font-size: 3rem;
+    font-size: 3rem;
 }
 
 /***** INSTRUCTIONS MODAL *****/
-.large-text {
-    font-size: 2rem;
-}
-
-.medium-text {
-    font-size: 1.2rem;
-}
-
 .bullet {
     font-weight: 600;
     font-style: italic;
 }
 
-.green-text {
-    color: var(--green);
-}
-
-.orange-text {
-    color: var(--orange);
-}
-
-.red-text {
-    color: var(--red);
-}
-
-.yellow-text {
-    color: var(--yellow);
-}
-
-.blue-text {
-    color: var(--blue);
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2rem;
 }
 
 /***** MEDIA QUERIES *****/
@@ -348,10 +363,6 @@ footer {
     .back-button {
         display: none;
     }
-
-    footer {
-        display: none;
-    }
 }
 
 @media (min-width: 768px) {
@@ -360,17 +371,11 @@ footer {
     }
 }
 
-.back-button {
-   position: fixed;
-   top: 40%;
+/***** HIDE FOOTER ON MOBILE DEVICES*/
+@media (max-width: 823px) {
+    footer {
+        display: none;
+    }
 }
 
-.hidden-button {
-    margin-top: 4rem;
-    font-size: 50%;
-}
 
-.high-score {
-    font-size: 2.5rem;
-    text-transform: uppercase;
-}
