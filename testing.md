@@ -1,6 +1,18 @@
-## Testing
+# Testing
 
-### Testing Overview
+## Table of Contents
+
+1. [**Testing Overview**](#testing-overview)
+2. [**Validation**](#validation)
+    - [**W3C Markup Validator results**](#w3c-markup-validator-results)
+    - [**W3C CSS Validator results**](#w3c-css-validator-results)
+    - [**JSHint Validation resultss**](#jshint-validation-results)
+3. [**Testing User Stories from User Experience (UX) Section**](#testing-user-stories-from-user-experience-(ux)-section)
+4. [**Manual Testing on Live Site**](#manual-testing-on-live-site)
+5. [**Jasmine Testing**](#jasmine-testing)
+6. [**Bugs Discovered**](#bugs-discovered)
+
+## Testing Overview
 
 - The website was tested on Google Chrome, Mozilla Firefox, Opera, Safari and Microsoft Edge browsers.
 
@@ -8,7 +20,7 @@
 
 - The website was tested on real-life devices, namely a 14" Windows laptop, an Alcatel 1 Android Phone and an iPhone SE.
 
-### Validation
+## Validation
 
 - The [W3C Markup Validator](https://validator.w3.org/#validate_by_input) service was used to validate the HTML code of the project.
   
@@ -16,7 +28,7 @@
 
 - [JSHint](https://jshint.com/) was used to validate the JavaScript code of the project.
 
-#### W3C Markup Validator results
+### W3C Markup Validator results
 
 - index.html
 
@@ -27,11 +39,11 @@
 
     - No errors or warnings were found.
 
-#### W3C CSS Validator results 
+### W3C CSS Validator results 
 
 - The CSS passed with no errors.
 
-#### JSHint Validation results
+### JSHint Validation results
 
 - Testing game.js
 
@@ -46,7 +58,7 @@
     The sendMail variable was declared as unused. This function is called in the form element of the index.html file.
 
 
-### Testing User Stories from User Experience (UX) Section
+## Testing User Stories from User Experience (UX) Section
 
 - As a player, I want:
  
@@ -151,7 +163,7 @@
         <img src="assets/images/testing_images/instructions.png" alt="Screenshot: instructions">
         </div>
 
-### Manual Testing on Live Site
+## Manual Testing on Live Site
 
 - Home page
 
@@ -228,7 +240,7 @@
     | Points per square     | 10    	| 20     	| 30    	|
     
 
-### Jasmine Testing
+## Jasmine Testing
 
 The following functions were tested with [Jasmine](https://jasmine.github.io/index.html).
 
@@ -266,7 +278,7 @@ To view the results in your browser please clone the project repository by follo
 and running the file [jasmine_testing.html](https://github.com/Johnny-Morgan/memory-blocks/blob/master/assets/jasmine_testing/jasmine_testing.html) 
 in your browser.
 
-### Bugs
+## Bugs Discovered
 
  - On small devices, the words in the text for the tagline were breaking and wrapping on to the next line. This was due to an issue with the JavaScript 
 code for the animation of the text. 
