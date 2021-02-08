@@ -193,7 +193,7 @@
   8. Verified that each square of the grid turned grey when the timer reached zero.
   9. Verified the colour picker appeared above the grid when the timer reached zero.
 
-- Game page - playing time stage- easy game
+- Game page - playing time stage - easy game
 
   1. Clicked on each of the colours of the colour picker to verify the border thickness of the clicked colour increased.
   2. Clicked on a square of the grid to verify its colour changed to that chosen in the colour picker.
@@ -210,6 +210,9 @@
         5. The message "Game Over!" was displayed.
         6. A message displaying the amount of correct answers was displayed.
         7. A message with the players score was displayed.
+        8. A congratulations message was displayed below the grid when the highscore was beaten.
+        9. The highscore at the top of the page updated when the highscore was beaten. 
+        10. Verified that the highscore had the same value when the browser was closed and reopened.
 
   2. Clicked on the show solution button to verify that the colours of the grid changed to the correct colours.
   3. Clicked on the play again button to verify the the game reset to the pre-game stage.
@@ -224,3 +227,42 @@
     | Playing Time (s)    	| 20    	| 40     	| 60    	|
     | Points per square     | 10    	| 20     	| 30    	|
     
+
+### Jasmine Testing
+
+The following functions were tested with [Jasmine](https://jasmine.github.io/index.html).
+
+Functions that return a value:
+
+- calculateMemorizingTime
+
+- calculatePlayingTime
+
+- getPoints
+
+All the above functions passed the tests.
+
+![Image](assets/images/testing_images/game_timers.png)
+
+Functions that manipulate the User Interface:
+
+- setUpEasyGame
+
+- setUpMediumGame
+
+- setUpHardGame
+
+- resetGame 
+
+All the above functions passed the tests.
+
+![Image](assets/images/testing_images/setUpEasyGame.png)
+![Image](assets/images/testing_images/setUpMediumGame.png)
+![Image](assets/images/testing_images/setUpHardGame.png)
+![Image](assets/images/testing_images/resetGame.png)
+
+To view the results in your browser please clone the project repository by following the "Cloning the GitHub Repository" steps in the 
+[README.md](https://github.com/Johnny-Morgan/memory-blocks/blob/master/README.md) 
+and running the file [jasmine_testing.html](https://github.com/Johnny-Morgan/memory-blocks/blob/master/assets/jasmine_testing/jasmine_testing.html) 
+in your browser.
+

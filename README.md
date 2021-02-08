@@ -267,6 +267,10 @@ For example no more than three of one colour could appear in the easy grid.
 
   - Autoprefixer was used to add vendor prefixes.
 
+- [Jasmine](https://jasmine.github.io/index.html)
+
+  - Jasmine was used to test this projects JavaScript functions.
+
 ## Testing
 
 The testing data for this project can be found in a separate file called [testing.md](https://github.com/Johnny-Morgan/memory-blocks/blob/master/testing.md).
