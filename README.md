@@ -8,7 +8,7 @@
 </div>
 
 1. [**Overview**](#overview)
-2. [**User Experience (UX)**](#user-experience-(ux))
+2. [**User Experience (UX)**](#user-experience--ux-)
     - [**User Stories**](#user-stories)
     - [**Wireframes**](#wireframes)
     - [**Design**](#design)
@@ -157,7 +157,7 @@ Player goals
      1. Highscore
 
         - A highscore is displayed at the top of the screen. The highscore is set to zero if the game has not been played before. When a player sets a 
-        new highscore, their highscore is saved in local storage and displayed every time they play the game on the same device.
+        new highscore, their highscore is saved in local storage and displayed every time they play the game on the same device and the same browser.
     
      2. The game grid
 
@@ -166,7 +166,7 @@ Player goals
 
      3. Level buttons
 
-        - The player has a choice of three levels, easy medium and hard. Each button is clearly labelled with a different colour for each level. A message 
+        - The player has a choice of three levels, easy, medium and hard. Each button is clearly labelled with a different colour for each level. A message 
         below the buttons prompts the player to choose a level. By clicking on a button the size of the grid changes according to the table below. A play button 
         is then displayed which starts the game when clicked.
 
@@ -207,7 +207,7 @@ Player goals
         ![Image](assets/images/finished_game.png)
 
         - When the timer for the playing time reaches zero the game finishes. An "X" appears on each square of the grid that was guessed incorrectly
-        or left blank. Two buttons appear one which displays the correct solution and one that resets the game so the player can play a new game. The 
+        or left blank. Two buttons appear, one which displays the correct solution and one that resets the game so the player can play a new game. The 
         button that displays the correct solution will not appear if the player filled in the entire grid correctly. 
 
         - A score is calculated for the player and displayed below the grid. The player earns points based on the table below. The player is also told 
@@ -289,6 +289,10 @@ For example, no more than three of one colour could appear in the easy grid.
 - [Jasmine](https://jasmine.github.io/index.html)
 
   - Jasmine was used to test this project's JavaScript functions.
+
+- [GitHub Wiki TOC generator](https://ecotrust-canada.github.io/markdown-toc/)
+
+  - Used to generate the table of contents in this document.
 
 ## Testing
 
