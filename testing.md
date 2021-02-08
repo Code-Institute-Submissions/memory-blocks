@@ -295,7 +295,7 @@ code for the animation of the text.
     });
     ```
 - When a game was being played for the first time, the highscore value was empty instead of diplaying "0". The code was setting the 
-variable highScore to 0 but the value was not being written to the 
+variable highScore to 0 but the text value for the highscore div was not being updated. 
 
     Fix: added the following code when the highScore variable was being checked:
 
@@ -317,3 +317,41 @@ This was because the highscore variable was not being updated when it was beaten
             $(".high-score-message").html("Congratulations! New high score!");
         }
     ```
+- The game grid could be changed during a game.
+
+    Fix: the div that the game level buttons are in was given a class of "game-level" and the "hidden" class was added to the div when the 
+    play button was clicked. The "hidden" class gives the css property "display" a value of "none".
+
+    ```javascript
+   $(".game-level").addClass("hidden");
+    ```
+
+- If the play button was clicked more than once during gameplay the memorizingTime function was called again. This caused the timeInterval 
+function to be called again, which lead to the memorizing timer to count down at a faster rate than normal.
+
+    Fix: hide the play button when it is clicked to prevent the player clicking it multiple times.
+
+    ```javascript
+   $("#play").addClass("hidden");
+    ```
+- The memorizing time was not calculated correctly if the player clicked between levels before pressing the play button. For example 
+if the player chose the easy level the boolean easyGame was set to true. However if they then clicked on the medium level button, the mediumGame 
+boolean was set to true. But the easyGame boolean still had a value of true. Therefore when the calculateMemorizingTime function was called it would return the value for an easyGame, as the first if statement is a check for an easyGame.
+
+    Fix: when the easy button is clicked set the easyGame boolean to true and set the mediumGame and hardGame booleans to false. 
+    Repeat for the medium and hard game button click events.
+
+    ```javascript
+   $("#easy").click(function () {
+    easyGame = true;
+    mediumGame = false;
+    hardGame = false; 
+    ```
+
+- When the game finished, the score variable was always calculated as the highest score achievable. This was because the showWrongGuesses function 
+was being called before calculateScore function. Calling the showWrongGuesses function first resulted in the playerColours array and the 
+copyOfGridColours array both being empty. Therefore when the score was calculated, each index of each array was compared and evaluated to be the 
+same (since they were both enmpty arrays). Hence the score and correctGuesses variables were incremented to the max score.
+
+Fix: call the showWrongGuesses function after calculateScore function.
+

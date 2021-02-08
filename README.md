@@ -316,7 +316,7 @@ This project can be forked using the following process:
 
 - The JavaScript to check if a device being used was a mobile device was take from stackoverflow user [laaposto](https://stackoverflow.com/questions/21555856/how-can-i-stop-a-js-function-from-running-on-a-mobile-device).
 
-- The code to clear the fields of the contact form modal was taken from stackoverflow user [Malk](https://stackoverflow.com/questions/21151044/how-to-clear-all-input-fields-in-bootstrap-modal-when-clicking-data-dismiss-butt);
+- The code to clear the fields of the contact form modal was taken from stackoverflow user [Malk](https://stackoverflow.com/questions/21151044/how-to-clear-all-input-fields-in-bootstrap-modal-when-clicking-data-dismiss-butt).
 
 ## Acknowledgements
 
