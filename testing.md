@@ -266,3 +266,54 @@ To view the results in your browser please clone the project repository by follo
 and running the file [jasmine_testing.html](https://github.com/Johnny-Morgan/memory-blocks/blob/master/assets/jasmine_testing/jasmine_testing.html) 
 in your browser.
 
+### Bugs
+
+ - On small devices the words in the text for the tagline were breaking and wrapping on to the next line. This was due to an issue with the JavaScript 
+code for the animation of the text. 
+
+    ![Image](assets/images/testing_images/bug_smartphone.png)
+
+    Fix: Disable the Javascript on small devices by adding the following code in the 
+    [utils.js](https://github.com/Johnny-Morgan/memory-blocks/blob/master/assets/js/utils.js) file:
+
+    ```javascript
+    if (!(/iPhone|iPad|iPod|Android|webOS|BlackBerry|Opera Mini|IEMobile/i.test(navigator.userAgent))) {
+        
+    }
+    ```
+
+- The fields in the contact form modal were not clearing when the modal was closed. 
+
+    Fix: added the following code to clear the three fields:
+
+    ```javascript
+    $('#contact').on('hidden.bs.modal', function (e) {
+        $(this)
+            .find("#name").val("").end()
+            .find("#email").val("").end()
+            .find("#message").val("").end();
+    });
+    ```
+- When a game was being played for the first time, the highscore value was empty instead of diplaying "0". The code was setting the 
+variable highScore to 0 but the value was not being written to the 
+
+    Fix: added the following code when the highScore variable was being checked:
+
+    ```javascript
+    $("#high-score").html("0");
+    ```
+
+- When a player received a score that was equal to the highScore, a message congratulating the player on a new highscore was displayed. 
+This was because the highscore variable was not being updated when it was beaten. 
+
+    Fix: update the value of the highScore variable:
+
+    ```javascript
+    // Check for new high score
+        if (score > highScore) {
+            highScore = score;
+            localStorage.setItem("highScore", score);
+            $("#high-score").html(localStorage.getItem("highScore"));
+            $(".high-score-message").html("Congratulations! New high score!");
+        }
+    ```
